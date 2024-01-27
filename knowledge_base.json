@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "question": "hey",
+      "answer": "Hi! I'm your SAT chatbot, Feel free to ask me anything"
+    },
+    {
+      "question": "hello",
+      "answer": "\"Hello! How can I assist you today?"
+    },
+    {
+      "question": "how are you",
+      "answer": "I'm good thanks for asking"
+    },
+    {
+      "question": "exit",
+      "answer": "Goodbye! Stay safe online."
+    },
+    {
+      "question": "bye",
+      "answer": "Goodbye! Stay safe online."
+    },
+    {
+      "question": "What is phishing?",
+      "answer": "Phishing is a type of cyber attack where attackers trick individuals into revealing sensitive information, such as usernames and passwords, by pretending to be a trustworthy entity."
+    },
+    {
+      "question": "is",
+      "answer": "How can I protect myself from malware"
+    },
+    {
+      "question": "How can I protect myself from malware",
+      "answer": "To protect yourself from malware, ensure your antivirus software is up-to-date, avoid downloading from untrusted sources, and be cautious with email attachments"
+    },
+    {
+      "question": "Tell me about two-factor authentication.",
+      "answer": "wo-factor authentication (2FA) adds an extra layer of security by requiring users to provide two forms of identification before accessing an account"
+    },
+    {
+      "question": "Why is cybersecurity important",
+      "answer": "Cybersecurity is crucial for protecting your personal and sensitive information from cyber threats."
+    },
+    {
+      "question": "importance of cybersecurity",
+      "answer": "Cybersecurity is crucial for protecting your personal and sensitive information from cyber threats."
+    }
+  ]
+}
