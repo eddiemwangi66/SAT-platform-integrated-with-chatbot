@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    
+    {% if user %}
+        <h2>Welcome to Your Security Awareness Training platform, {{ user.username }}!</h2>
+
+        <!-- Display additional user information including username -->
+        <p>Email: {{ user.email }}</p>
+        <p>Username: {{ user.username }}</p>
+        <p>This is your default home page. </p>
+        <nav>
+            <ul>
+                <li><a href="page1.html">Page 1</a></li>
+                <li><a href="page2.html">Page 2</a></li>
+                <li><a href="page3.html">Page 3</a></li>
+            </ul>
+        </nav>
+    
+        <section>
+            <h2>Main Content</h2>
+            <!-- Add your main content here -->
+        </section>
+    
+        <section>
+            <h2>Another Section</h2>
+            <!-- Add another section of content here -->
+        </section>
+    
+
+        <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+        <p>Error fetching user data. Please try again.</p>
+    {% endif %}
+</body>
+</html>
