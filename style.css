@@ -1,43 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #850606;
+    padding-top:20px; /* Adjusted to accommodate the fixed navbar and provide space */
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-form {
-    background-color: #ce2a2a;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+.navbar-brand {
+    font-size: 1.0em;
+    color: #bd3232; /* Color of brand in the sidebar */
 }
 
-label {
+.navbar {
+    position:fixed;
+    padding: auto;
+    top: 0px;
+    height: auto;
+    width: auto;
+    z-index: 100;
+   
+}
+
+
+.content {
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 80px; /* Adjusted for the left-nav width and additional space */
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.left-nav {
+    position:fixed;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    overflow-y: hidden;
+    padding: top 0%;;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 1px solid #08778b;
+    background-color: #f8f9fa;
+    margin-top:0px;
+}
+
+.navbar-right {
+    margin-left: auto;
+    padding-left: auto;
+    padding-right: 22%;
+}
+
+/* Added styles for back and forward buttons */
+.navigation-buttons {
+    margin-top: 10px;
+    padding-left: 80px;
+}
+.collapse{
     display: block;
-    margin-bottom: 8px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #0978f7;
-    color: rgb(104, 12, 12);
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.message {
-    color: rgb(255, 0, 128)(4, 0, 255);
-    margin-bottom: 16px;
 }
