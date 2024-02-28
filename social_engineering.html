@@ -1,0 +1,83 @@
+<!-- social_engineering.html -->
+{% extends 'base.html' %}
+
+{% block title %}Social Engineering{% endblock %}
+
+{% block content %}
+<style>
+    .left-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        overflow-y: hidden;
+        padding-top:20px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        border-right: 1px solid #08778b;
+        background-color: #f8f9fa;
+        margin-top: 55px;
+    }
+    body {
+                padding-top:0px; /* Adjusted to accommodate the fixed navbar and provide space */
+                margin: 0;
+            }
+    
+     .content {
+                margin-top: 20px;
+                padding-left: 40px; /* Adjusted for the left-nav width and additional space */
+            }
+    .navbar-right {
+                margin-left: auto;
+                padding-left: auto;
+                padding-right: 12%;
+            }       
+            
+            .navigation-buttons {
+        margin-top: 10px;
+        padding-left: 80px;
+    }
+    </style>
+    <div class="container mt-5 content">
+    <h1>Social Engineering</h1>
+    <p>Social engineering attacks are a popular choice among threat actors. That’s because
+         it’s often easier to trick people into providing them with access, information, or
+          money than it is to exploit a software or network vulnerability.</p>
+   <p>
+    social engineering is a manipulation technique that exploits human error to gain private information,
+     access, or valuables. It's an umbrella term that can apply to a broad range of attacks. Each technique
+      is designed to capitalize on the trusting nature of people and their willingness to help. 
+   </p>
+     <p>Social engineering is a form of deception that takes advantage of the way people think. It preys on 
+    people's natural feelings of curiosity, generosity, and excitement. Threat actors turn those feelings
+     against their targets by affecting their better judgment. Social engineering attacks can be incredibly
+      harmful because of how easy they can be to accomplish.</p>
+
+      <h3>Social engineering tactics</h3>
+      <p>Social engineering attacks are a popular choice among threat actors. That’s because it’s often 
+        easier to trick people into providing them with access, information, or money than it is to exploit
+         a software or network vulnerability.</p>
+         <p>As you might recall, social engineering is a manipulation technique that exploits human error
+            to gain private information, access, or valuables. It's an umbrella term that can apply to a 
+            broad range of attacks. Each technique is designed to capitalize on the trusting nature of people 
+            and their willingness to help. In this reading, you will learn about specific social engineering 
+            tactics to watch out for. You’ll also learn ways that organizations counter these threats.</p>
+
+            <div class="container mt-5 content">
+                <h2>Cybersecurity Topics covered</h2>
+                <p>In this section we shall cover some of the crucial topics that you as a user should be educated about and made
+                    aware of. The  cybersecurity awareness training curricula should reflect an organization's risk-based priorities 
+                    -- as well as, ideally, individual users' roles -- some topics are universally important. </p>
+                    <p>We shall dive deeply into the topics in the following page. click the next button below to continue.</p>
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item "><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="{{ url_for('password') }}">2</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ url_for('phishing_education') }}">3</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ url_for('phishing_education') }}">Next</a></li>
+                </ul>
+            </div>
+   </div>
+{% endblock %}

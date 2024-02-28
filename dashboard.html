@@ -1,41 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap and jQuery scripts -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Custom Styles */
+        body {
+            padding-top:20px; /* Adjusted to accommodate the fixed navbar and provide space */
+            margin: 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.0em;
+            color: #bd3232; /* Color of brand in the sidebar */
+        }
+
+        .navbar {
+            position:fixed;
+            padding: auto;
+            top: 0;
+            height: auto;
+            width: auto;
+            z-index: 100;
+           
+        }
+       
+
+        .content {
+            margin-top: 20px;
+            padding-right: 10px;
+            padding-left: 80px; /* Adjusted for the left-nav width and additional space */
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .left-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            overflow-y: hidden;
+            padding-top:20px;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            border-right: 1px solid #08778b;
+            background-color: #f8f9fa;
+            margin-top: 55px;
+        }
+
+        .navbar-right {
+            margin-left: auto;
+            padding-left: auto;
+            padding-right: 12%;
+        }
+
+        /* Added styles for back and forward buttons */
+        .navigation-buttons {
+            margin-top: 10px;
+            padding-left: 80px;
+        }
+        .collapse{
+            display: block;
+        }
+
+        
+    </style>
 </head>
+
 <body>
+    <!-- Navigation Bar -->
     
-    {% if user %}
-        <h2>Welcome to Your Security Awareness Training platform, {{ user.username }}!</h2>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+        <a class="navbar-brand" href="#">SAT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="nav-link" href="{{ url_for('education') }}">Education</a></li>
 
-        <!-- Display additional user information including username -->
-        <p>Email: {{ user.email }}</p>
-        <p>Username: {{ user.username }}</p>
-        <p>This is your default home page. </p>
-        <nav>
-            <ul>
-                <li><a href="page1.html">Page 1</a></li>
-                <li><a href="page2.html">Page 2</a></li>
-                <li><a href="page3.html">Page 3</a></li>
+                
+                
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('phishing') }}">Phishing</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('chatbot') }}">Chatbot</a></li>
             </ul>
-        </nav>
-    
-        <section>
-            <h2>Main Content</h2>
-            <!-- Add your main content here -->
-        </section>
-    
-        <section>
-            <h2>Another Section</h2>
-            <!-- Add another section of content here -->
-        </section>
-    
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a class="nav-link"  href="{{ url_for('register') }}"><span
+                            class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                
+               
+               
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="caret"></span>
+                                    Account
+                                  </a>
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- User details will go here -->
+                                    <li><a class="dropdown-item" href="#">Username:{{ user.username }}</a></li>
+                                    <li><a class="dropdown-item" href="#">Email:  {{ user.email }}</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li class="nav-item"><a class="dropdown-item" data-toggle="tab" href="{{ url_for('logout') }}"><span
+                                        class="glyphicon glyphicon-user"></span>Logout</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
 
-        <a href="{{ url_for('logout') }}">Logout</a>
-    {% else %}
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- Left Navigation -->
+    <div class="left-nav d-flex flex-column">
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('dashboard') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('education') }}">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Simulation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Gamification</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Newsletter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Incident Report</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('register') }}">Page 5</a>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Education 
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="#">Password Security</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Page 1-2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Page 1-3</a></li>
+                </ul>
+            </li>
+            
+           
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5 content">
+        <!-- Main content sections here -->
+        {% if user %}
+        <section id="home">
+            <h2>Welcome to our Cybersecurity Training Platform</h2>
+            <h4>Welcome to Your Security Awareness Training platform, <span style="color: #bd3232;">{{ user.username }}!</span>
+            </h4>
+            <p>This is the Email you have used to log in to our platform: <span style="font-style: italic; color: rgb(92, 92, 89);">{{ user.email }}</span>.
+                 We encourage that you ensure that this is your email. From now on we shall use this email to trace your activities and help
+                 to ensure that you are equipped profeciently in the world of cybersecurity. </p>
+            <p>We appreciate the dedication and the trust that you have given this platform so as to gain knowledge and 
+                skills about cybersecurity.Similar to your email this is your Username: <span style="font-style: italic; color: rgb(92, 92, 89);">{{ user.username }}</span>
+            .We will use this account details so as to communicate with you and also have a personal relationship with you as you 
+            embark this training</p>
+            <p>This is your gateway to enhanced cybersecurity awareness and training. In the digital age, safeguarding
+                 our information is paramount, and your commitment to cybersecurity is the first line of defense against 
+                 cyber threats.Get ready to embark on a journey of knowledge, where you'll explore the essentials of cybersecurity,
+                 learn best practices, and gain the skills needed to protect yourself and our organization from potential cyber risks. </p>
+            <p>Learn about cybersecurity best practices to protect yourself and your organization.</p>
+        </section>
+
+        <section id="chatbot" class="mt-4">
+            <h3>Chatbot</h3>
+            <p>Interact with our intelligent chatbot to get answers to your cybersecurity queries.your go-to virtual 
+                assistant for information, assistance, and a touch of fun! I'm here to make your experience seamless
+                 and enjoyable.
+                Whether you're seeking information, need help with a task, or just want to chat, I'm at your service.
+                 Just type your questions, and I'll do my best to assist you. Your privacy and security are important to us.
+                 Rest assured that your interactions with me are confidential, and I'm here to provide you with reliable and
+                  accurate information.</p>
+        </section>
+
+        <!-- Add other sections as needed -->
+
+        <section id="newsletter" class="mt-4">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for regular updates and articles on cybersecurity.  Stay 
+                tuned for regular updates, industry insights, and tips to stay one step ahead in the ever-evolving 
+                landscape of cybersecurity.xpect our newsletter in your inbox  with a curated selection of articles 
+                designed to elevate your reading experience. Feel free to share your thoughts, suggestions, or even 
+                contribute your stories  because this newsletter is about creating a community where everyone has a voice.</p>
+                 
+        </section>
+        {% else %}
         <p>Error fetching user data. Please try again.</p>
-    {% endif %}
+        {% endif %}
+
+        <div class="container mt-5">
+            <h3>Education</h3>
+            <p>We invite you to our educcation page.  the hub for knowledge, exploration, and growth! We're delighted to
+                 have you join our community of passionate learners.our mission is to make learning accessible, engaging,
+                  and meaningful. Whether you're a student, a professional looking to upskill, or someone curious about 
+                  a new subject, you're in the right place.As you embark on your educational journey, remember that learning 
+                  is a lifelong adventure. The more you explore, the more you grow. Feel free to reach out if you have any questions or if there's a specific topic you'd like to see covered.</p>
+            <p>To continue with your cybesecurity education and awareness click the  button below.</p>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div>
+    </div>
+
+     <!-- Navigation Buttons -->
+     <div class="container mt-5 navigation-buttons">
+        <button onclick="goBack()" class="btn btn-primary">Back</button>
+        <button onclick="goForward()" class="btn btn-primary ml-2">Forward</button>
+    </div>
+
+    <!-- Custom JavaScript for navigation -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goForward() {
+            window.history.forward();
+        }
+    </script>
+
+    <!-- Bootstrap and jQuery scripts (removed duplicate references) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

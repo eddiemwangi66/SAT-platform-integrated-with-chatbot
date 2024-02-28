@@ -1,0 +1,104 @@
+<!--education.html -->
+{% extends 'base.html' %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<style>
+.left-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    overflow-y: hidden;
+    padding-top:20px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 1px solid #08778b;
+    background-color: #f8f9fa;
+    margin-top: 55px;
+}
+body {
+            padding-top:0px; /* Adjusted to accommodate the fixed navbar and provide space */
+            margin: 0;
+        }
+
+ .content {
+            margin-top: 20px;
+            padding-left: 40px; /* Adjusted for the left-nav width and additional space */
+        }
+.navbar-right {
+            margin-left: auto;
+            padding-left: auto;
+            padding-right: 12%;
+        }       
+        
+        .navigation-buttons {
+    margin-top: 10px;
+    padding-left: 80px;
+}
+</style>
+    <div class="container mt-5 content">
+        <h1>Welcome to the education page</h1>
+       
+        <p>This page will aim to educate you about matters about cybersecurity. We will dive into various topics that
+             are associated with cybersecurity. </p>
+        <p>The purpose of awareness training is to make sure everyone knows what is expected of them, based on
+             responsibilities and accountabilities, and to find out 
+            if there is any carelessness or complacency that may pose a risk to the organization.
+             We will be able to align the information security goals with the organization's missions and vision and 
+             have a better sense of what the environment is. </p>
+       <h4>What is Security Awareness Training?</h4>
+       <p>  Let's start with a clear understanding of the three different types of learning activities that organizations
+         use, whether for information security or for any other purpose:</p>
+          <p> Education: The overall goal of education is to help learners improve their understanding of these ideas and 
+            their ability to relate them to their own experiences and apply that learning in useful ways.</p>
+            <p>Training: Focuses on building proficiency in a specific set of skills or actions, including sharpening
+             the perception and judgment needed to make decisions as to which skill to use, when to use it and how to
+              apply it. Training can focus on low-level skills, an entire task or complex workflows consisting of many 
+              tasks.</p>
+            <p>Awareness: These are activities that attract and engage the learner's attention by acquainting them with
+             aspects of an issue, concern, problem or need.</p>
+           <p> You'll notice that none of these have an expressed or implied degree of formality, location or target 
+            audience. (Think of a newly hired senior executive with little or no exposure to the specific compliance
+             needs your organization faces; first, someone has to get their attention and make them aware of the need 
+             to understand. The rest can follow.)</p>
+             <p>Education may help workers in a secure server room understand the interaction of the various fire and
+                 smoke detectors, suppression systems, alarms and their interactions with electrical power, lighting 
+                 and ventilation systems.</p>
+                 <p>Training would provide those workers with task-specific, detailed learning about the proper actions
+                     each should take in the event of an alarm, a suppression system going off without an alarm, a 
+                     ventilation  system failure or other contingency. This training would build on the learning
+                      acquired via the educational activities.</p>
+
+                    <p>Awareness activities would include not only posting the appropriate signage, floor or doorway 
+                        markings, but also other indicators to help workers detect an anomaly, respond to an alarm and 
+                        take appropriate action. In this case, awareness is a constantly available reminder of what to
+                         do when the alarms go off. </p>
+                         <p>Security awareness training is defined by Wikipedia as the training given to members in an
+                             organization on the importance of protecting of both physical and information assets</p>
+                             <p>The goal of security training is to raise trainee’s awareness level and influencing the
+                                 security behavior in a positive manner. Cyber security training aims to educate users 
+                                 on ways to identify and respond to cyber threats. Its goal is to enhance user’s ability 
+                                 to safeguard from cyber-attacks. Cyber security awareness aims to make users aware of the 
+                                 significance cybersecurity and  their role in protecting themselves. The objective is to
+                                  instill a security- conscious culture within an organization.</p>
+        
+        <div class="container mt-5 content">
+            <h2>Cybersecurity Topics covered</h2>
+            <p>In this section we shall cover some of the crucial topics that you as a user should be educated about and made
+                aware of. The  cybersecurity awareness training curricula should reflect an organization's risk-based priorities 
+                -- as well as, ideally, individual users' roles -- some topics are universally important. </p>
+                <p>We shall dive deeply into the topics in the following page. click the next button below to continue.</p>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('password') }}">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('password') }}">Next</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

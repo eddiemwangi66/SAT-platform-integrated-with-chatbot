@@ -1,0 +1,85 @@
+<!--phishing_education.html -->
+{% extends 'base.html' %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<style>
+.left-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    overflow-y: hidden;
+    padding-top:20px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 1px solid #08778b;
+    background-color: #f8f9fa;
+    margin-top: 55px;
+}
+body {
+            padding-top:0px; /* Adjusted to accommodate the fixed navbar and provide space */
+            margin: 0;
+        }
+
+ .content {
+            margin-top: 20px;
+            padding-left: 40px; /* Adjusted for the left-nav width and additional space */
+        }
+.navbar-right {
+            margin-left: auto;
+            padding-left: auto;
+            padding-right: 12%;
+        }       
+        
+        .navigation-buttons {
+    margin-top: 10px;
+    padding-left: 80px;
+}
+</style>
+    <div class="container mt-5 content">
+        <h1>Welcome to the Phishing education page</h1>
+        <p>phishing is the use of digital communications
+             to trick people into revealing sensitive data or deploying malicious software. </p>
+             <p>phishing attacks appear to come from a trusted person or business. This can lead 
+                unsuspecting recipients into acting against their better judgment, causing them to break security procedures.</p>
+                <p>An attack that attempts to misdirect legitimate users to malicious websites through the abuse of URLs or hyperlinks
+                    in emails could be considered phishing.</p>
+        <h3>The origins of phishing</h3>
+
+       <p>Phishing has been around since the early days of the internet. It can be traced back to the 1990s. At the
+         time, people across the world were coming online for the first time. As the internet became more accessible it 
+         began to attract the attention of malicious actors. These malicious actors realized that the internet gave them
+          a level of anonymity to commit their crimes.</p>
+        
+        <h2>Types of phishing</h2>  
+        <p>A number of techniques began to appear around this time period, many of which are still used today. 
+            There are five common types of phishing that every security analyst should know:</p>
+            <p>Email phishing is a type of attack sent via email in which threat actors send messages pretending to be a 
+                trusted person or entity.</p>
+                <p>Smishing is a type of phishing that uses Short Message Service (SMS), a technology that powers text messaging.
+                 Smishing covers all forms of text messaging services, including Apple’s iMessages, WhatsApp, and other chat mediums on phones.
+                </p>
+                <p>Vishing refers to the use of voice calls or voice messages to trick targets into providing personal information over the phone.</p>
+               <p> Spear phishing is a subset of email phishing in which specific people are purposefully targeted, such as the accountants of a small 
+                business.</p>
+                <p>Whaling refers to a category of spear phishing attempts that are aimed at high-ranking executives in an organization.</p>
+        <div class="container mt-5 content">
+            <h2>Cybersecurity Topics covered</h2>
+            <p>In this section we shall cover some of the crucial topics that you as a user should be educated about and made
+                aware of. The  cybersecurity awareness training curricula should reflect an organization's risk-based priorities 
+                -- as well as, ideally, individual users' roles -- some topics are universally important. </p>
+                <p>We shall dive deeply into the topics in the following page. click the next button below to continue.</p>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('password') }}">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('password') }}">Next</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

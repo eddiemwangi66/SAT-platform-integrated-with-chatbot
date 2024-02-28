@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
     
     <title>Registration</title>
     <style>
@@ -49,14 +58,17 @@
         }
     </style>
 </head>
-<body>
+<body ng-app="">
     <h2>Registration Form</h2>
-    <form action="{{ url_for('register') }}" method="post">
+    <form action="{{ url_for('register') }}" method="post" name="myForm">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input ng-model="myInput" type="email" id="email" name="email" required>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
+
+        <label for="username">Username:</label>
+        <input type="username" id="username" name="username" required>
 
         <button type="submit">Register</button>
     </form>

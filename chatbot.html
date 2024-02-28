@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <!--education.html -->
+{% extends 'base.html' %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+    <style>
+        /* Style to initially hide the "Teach Me" button and new answer input */
+        #teachMeButton,
+        #newAnswerInput {
+            display: none;
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
+
+        /* Style to improve layout */
+        #conversation {
+            margin-bottom: 10px;
+        }
+
+        /* Style to make the conversation history scrollable */
+        #conversation {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .left-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    overflow-y: hidden;
+    padding-top:20px;
+    padding-right:-5px;
+    padding-left:0px;
+    border-right: 1px solid #08778b;
+    background-color: #f8f9fa;
+    margin-top: 55px;
+}
+body {
+            padding-top:0px; /* Adjusted to accommodate the fixed navbar and provide space */
+            margin: 0;
+            padding-left: 50px;
+        }
+
+ .content {
+            margin-top: 20px;
+            padding-left: 40px; /* Adjusted for the left-nav width and additional space */
+        }
+.navbar-right {
+            margin-left: auto;
+            padding-left: auto;
+            padding-right: 12%;
+        }       
+        
+        .navigation-buttons {
+    margin-top: 10px;
+    padding-left: 80px;
+    padding-top: 20%;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Chat Bot</h1>
+
+    <p ></p>
+    <!-- Display conversation history -->
+    <div id="conversation"></div>
+
+    <div id="newAnswerInput">
+        <!-- New input field for the user to input a new answer -->
+        <label for="newAnswer">Enter a new answer:</label>
+        <input type="text" id="newAnswer" name="new_answer">
+        <button onclick="submitNewAnswer()">Submit New Answer</button>
+    </div>
+
+    <form action="/ask" method="post" onsubmit="return false;">
+        <div>
+            <label for="userInput">You:</label>
+            <input type="text" id="userInput" name="user_input" required>
+            <button onclick="submitUserInput()">Submit</button>
+        </div>
+    </form>
+
+    <!-- Add the "Teach Me" button with an id for manipulation -->
+    <button id="teachMeButton" onclick="showNewAnswerInput()">Teach Me</button>
+
+    <script>
+        // JavaScript for handling new answer submission
+        function submitNewAnswer() {
+            var userInput = document.getElementById('userInput').value;
+            var newAnswer = document.getElementById('newAnswer').value;
+
+            if (newAnswer.trim() !== '') {
+                // Send an AJAX request to add the new question and answer
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/teach", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.status === "success") {
+                            alert("New answer added successfully!");
+                            // Hide the "Teach Me" button and new answer input after successful submission
+                            document.getElementById('teachMeButton').style.display = 'none';
+                            document.getElementById('newAnswerInput').style.display = 'none';
+                        } else {
+                            alert("Failed to add new answer.");
+                        }
+                    }
+                };
+                xhr.send("user_input=" + encodeURIComponent(userInput) + "&new_answer=" + encodeURIComponent(newAnswer));
+            }
+        }
+
+        // JavaScript to toggle the visibility of the "Teach Me" button and new answer input
+        function showNewAnswerInput() {
+            // Display the new answer input field when the "Teach Me" button is clicked
+            document.getElementById('newAnswerInput').style.display = 'block';
+        }
+
+        // Function to submit user input and update the conversation
+        function submitUserInput() {
+            var userInput = document.getElementById('userInput').value;
+            // Add user's question to the conversation
+            updateConversation("You: " + userInput);
+
+            // Send an AJAX request to get the bot's response
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/ask", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    // Add bot's response to the conversation
+                    updateConversation("Bot: " + response.bot_response);
+                    
+                    // If the bot asks to teach, show the "Teach Me" button
+                    if (response.bot_response === "I don't know the answer. Can you teach me?") {
+                        document.getElementById('teachMeButton').style.display = 'block';
+                    }
+                }
+            };
+            xhr.send("user_input=" + encodeURIComponent(userInput));
+        }
+
+        // Function to update the conversation
+        function updateConversation(message) {
+            var conversationDiv = document.getElementById('conversation');
+            var existingContent = conversationDiv.innerHTML;
+            conversationDiv.innerHTML = existingContent + "<p>" + message + "</p>";
+            // Clear the user input field
+            document.getElementById('userInput').value = '';
+
+            // Scroll to the bottom to show the latest messages
+            conversationDiv.scrollTop = conversationDiv.scrollHeight;
+        }
+    </script>
+</body>
+
+
+</html>
+
+{% endblock %}

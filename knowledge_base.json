@@ -6,7 +6,7 @@
     },
     {
       "question": "hello",
-      "answer": "\"Hello! How can I assist you today?"
+      "answer": "Hello! How can I assist you today?"
     },
     {
       "question": "how are you",
@@ -25,20 +25,16 @@
       "answer": "Phishing is a type of cyber attack where attackers trick individuals into revealing sensitive information, such as usernames and passwords, by pretending to be a trustworthy entity."
     },
     {
-      "question": "is",
-      "answer": "How can I protect myself from malware"
-    },
-    {
       "question": "How can I protect myself from malware",
       "answer": "To protect yourself from malware, ensure your antivirus software is up-to-date, avoid downloading from untrusted sources, and be cautious with email attachments"
     },
     {
       "question": "Tell me about two-factor authentication.",
-      "answer": "wo-factor authentication (2FA) adds an extra layer of security by requiring users to provide two forms of identification before accessing an account"
+      "answer": "Two-factor authentication (2FA) adds an extra layer of security by requiring users to provide two forms of identification before accessing an account"
     },
     {
       "question": "Why is cybersecurity important",
-      "answer": "Cybersecurity is crucial for protecting your personal and sensitive information from cyber threats."
+      "answer": "Cybersecurity is crucial for protecting your personal and sensitive information from cyber threats.Cybersecurity is the practice of protecting computer systems, networks, and data from theft, damage, or unauthorized access. It involves implementing measures to prevent, detect, and respond to security threats."
     },
     {
       "question": "importance of cybersecurity",
@@ -50,14 +46,6 @@
     },
     {
       "question": "",
-      "answer": ""
-    },
-    {
-      "question": "quit",
-      "answer": "quit"
-    },
-    {
-      "question": "",
       "answer": "Security Awareness and Training"
     },
     {
@@ -65,12 +53,120 @@
       "answer": "SECURITY AWARENESS AND TRAINING "
     },
     {
-      "question": "school",
-      "answer": "kabarak"
+      "question": "good afternoon",
+      "answer": "good afternoon how can I help"
     },
     {
-      "question": "undefined",
-      "answer": "weakness in a system"
+      "question": "Firewall?",
+      "answer": "A firewall is a hardware or software-based network security device that monitors all incoming and outgoing traffic and accepts, denies, or drops that particular traffic based on a defined set of security rules."
+    },
+    {
+      "question": "what is a firewall",
+      "answer": "A firewall is a hardware or software-based network security device that monitors all incoming and outgoing traffic and accepts, denies, or drops that particular traffic based on a defined set of security rules."
+    },
+    {
+      "question": " social engineering attack",
+      "answer": "Social engineering is the act of manipulating individuals to take actions that may or may not be in the best interests of the \u201ctarget\u201d."
+    },
+    {
+      "question": "Spoofing",
+      "answer": "Spoofing is a type of attack on computing devices in which an attacker attempts to steal the identity of a legitimate user and pretend to be someone else. This type of attack is performed to compromise system security or steal user information."
+    },
+    {
+      "question": "SQL injection",
+      "answer": "SQL injection is a technique used to exploit user data through web page input by injecting SQL commands as statements. Essentially, these instructions can be used by a malicious user to manipulate her web server for your application. SQL injection is a code injection technique that can corrupt your database. "
+    },
+    {
+      "question": "Distributed Denial of Service attack (DDoS)",
+      "answer": "A denial of service (DoS) is a cyber attack against an individual computer or website aimed at denying service to intended users. Its purpose is to interfere with the organization\u2019s network operations by denying her access. Denial of service is usually achieved by flooding the target machine or resource with excessive requests, overloading the system, and preventing some or all legitimate requests from being satisfied."
+    },
+    {
+      "question": "DDoS",
+      "answer": "A denial of service (DoS) is a cyber attack against an individual computer or website aimed at denying service to intended users. Its purpose is to interfere with the organization\u2019s network operations by denying her access. Denial of service is usually achieved by flooding the target machine or resource with excessive requests, overloading the system, and preventing some or all legitimate requests from being satisfied."
+    },
+    {
+      "question": "Virus",
+      "answer": "A virus is malicious executable code attached to another executable file that can be harmless or modify or delete data."
+    },
+    {
+      "question": "worm",
+      "answer": "Worms are similar to viruses, but do not modify the program. It replicates more and more to slow down your computer system. The worm can be controlled with a remote control. The main purpose of worms is to eat up system resources."
+    },
+    {
+      "question": " Botnet",
+      "answer": "A botnet) is a network of malware-infected computers under the control of a single attacker known as a \u201cbot herder\u201d. An individual machine under the control of a bot herder is called a bot."
+    },
+    {
+      "question": "man-in-the-middle attack",
+      "answer": "This is a type of cyber attack in which the attacker stays between the two to carry out their mission. The type of function it can perform is to modify the communication between two parties so that both parties feel like they are communicating over a secure network."
+    },
+    {
+      "question": "How can I create a strong password?",
+      "answer": "Use a combination of uppercase and lowercase letters, numbers, and special characters. Avoid easily guessable information like birthdays or names."
+    },
+    {
+      "question": "What is two-factor authentication (2FA), and why should I use it?",
+      "answer": "2FA adds an extra layer of security by requiring a second form of verification, such as a code from your phone. It enhances account protection even if your password is compromised."
+    },
+    {
+      "question": "How can I identify phishing emails?",
+      "answer": "Look for suspicious email addresses, check for spelling errors, and avoid clicking on unexpected links or downloading attachments. Verify email legitimacy with the sender if in doubt."
+    },
+    {
+      "question": "What is ransomware, and how can I protect my data from it?",
+      "answer": "Ransomware is malicious software that encrypts your files. Protect against it by regularly backing up data, keeping software updated, and being cautious of email attachments or links."
+    },
+    {
+      "question": "What is a VPN, and do I need one?",
+      "answer": "A VPN encrypts your internet connection for added privacy. Use one, especially on public networks, to protect your data from potential eavesdropping."
+    },
+    {
+      "question": "How do I recognize and avoid scams online?",
+      "answer": " Be skeptical of unsolicited emails or offers, verify the legitimacy of websites, and avoid sharing personal or financial information with untrusted sources. Education and caution are key."
+    },
+    {
+      "question": "How can I securely back up my data?",
+      "answer": "Use a combination of local and cloud backups for redundancy. Regularly back up important data to an external hard drive or a secure cloud service. Ensure that your backup is encrypted and regularly test restoration procedures."
+    },
+    {
+      "question": "What should I do if my account is hacked?",
+      "answer": "If you suspect your account is hacked, change your password immediately, enable two-factor authentication if not already done, and contact the platform's support for further assistance. Regularly monitor account activity and use unique passwords for different accounts."
+    },
+    {
+      "question": "Should I be concerned about Internet of Things (IoT) security?",
+      "answer": "Yes, IoT devices can be vulnerable to cyber threats. Change default passwords on IoT devices, update their firmware regularly, and segment your network to isolate IoT devices from critical systems."
+    },
+    {
+      "question": "What is multifactor authentication?",
+      "answer": "Multifactor authentication means using more than one way to prove your identity when accessing a system or account. It's like having multiple locks on a door \u2013 you need keys from different places to unlock it. Similarly, with multifactor authentication, you need to provide different types of information to access your account, adding an extra layer of security."
+    },
+    {
+      "question": "Why is cybersecurity important?",
+      "answer": "Cybersecurity is crucial because it safeguards sensitive information, prevents unauthorized access, protects against cyberattacks, and ensures the integrity and availability of data and systems. It is essential for maintaining trust in digital environments."
+    },
+    {
+      "question": "How can businesses protect sensitive customer data?",
+      "answer": " Businesses can protect sensitive customer data by implementing encryption, conducting regular security audits, educating employees on cybersecurity best practices, securing network access, and complying with relevant data protection regulations."
+    },
+    {
+      "question": "What is a vulnerability assessment?",
+      "answer": " A vulnerability assessment is the process of identifying and evaluating potential weaknesses in a computer system, network, or application. It helps organizations understand their security posture and prioritize measures to address and mitigate vulnerabilities."
+    },
+    {
+      "question": "Define DNS?",
+      "answer": " The Domain Name System (DNS) translates domain names into IP addresses that browsers use to load web pages. Every device connected to the Internet has its own IP address, which other devices use to identify it in simple language, we can say that DNS Defines the Service of the network"
+    },
+    {
+      "question": "What is an Active Cyber Attack",
+      "answer": "An active attack is a type of attack in which the attacker modifies or attempts to modify the content of the message. Active attacks are a threat to integrity and availability. Active attacks can constantly corrupt the system and modify system resources. Most importantly, if there is an active attack, the victim is notified of the attack."
+    },
+    {
+      "question": "hey",
+      "answer": "Hi! welcome to your cybersecurity chatbot feel free to ask a question"
+    },
+    {
+      "question": "thrat actor",
+      "answer": " a person who wants to cause harm"
     }
   ]
 }
