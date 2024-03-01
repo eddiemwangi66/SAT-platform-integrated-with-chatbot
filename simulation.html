@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Simulation</title>
+</head>
+<body>
+    <h1>Cybersecurity Simulation</h1>
+    <p>{{ simulation.scenario_description }}</p>
+    <form method="post" action="{{ url_for('simulation_response') }}">
+        <!-- Add input fields or other elements for user interaction in the simulation -->
+        <button type="submit">Submit Response</button>
+    </form>
+</body>
+</html>
