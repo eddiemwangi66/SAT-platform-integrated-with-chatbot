@@ -324,10 +324,15 @@ def load_knowledge_base(file_path):
 
 # Save the knowledge base
 def save_knowledge_base(file_path, data):
-    with open(file_path, 'w') as file:
-        json.dump(data, file, indent=2)
-
-
+    if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
+        with open(file_path, 'w') as file:
+            json.dump(data, file, indent=2)
+    else:
+        with open(file_path, 'r') as file:
+            existing_data = json.load(file)
+        if existing_data != data:
+            with open(file_path, 'w') as file:
+                json.dump(data, file, indent=2)
 # Find the best match
 def find_best_match(user_question, questions):
     matches = get_close_matches(user_question, questions, n=1, cutoff=0.6)
