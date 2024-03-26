@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Training</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Phishing Training</h1>
+        <hr>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-info">
+              <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <h2>Introduction to Phishing</h2>
+        <p>Phishing is a type of cyber attack where attackers try to trick you into revealing sensitive information, such as your username and password, by sending fake emails or texts that appear to be from reputable sources. These messages may contain links to fraudulent websites that look similar to legitimate ones, but are designed to steal your information.</p>
+
+        <h2>Recognizing Phishing Attempts</h2>
+        <ul>
+          <li>Check the sender's address to make sure it's from a reputable source. Phishers often use addresses that are very similar to legitimate ones, but with a slight change, such as a missing letter or a different domain.</li>
+          <li>Be wary of messages that ask you to click on a link to confirm your account information or reset your password. Legitimate companies will not ask you to do this.</li>
+          <li>Look for typos and grammatical errors. Phishers often make mistakes when crafting their messages.</li>
+          <li>Check the URL of the website you are directed to. If it looks suspicious, do not enter any information.</li>
+          <li>Never provide sensitive information, such as your password,over email or text message. Legitimate companies will not ask you to do this.</li>
+        </ul>
+
+        <h2>What to Do if You Suspect Phishing</h2>
+        <ul>
+          <li>Do not click on any links or buttons in the suspicious message.</li>
+          <li>Delete the message immediately.</li>
+          <li>Report the message to the legitimate company and to your IT department.</li>
+        </ul>
+
+        <h2>Additional Resources</h2>
+        <p>For more information on phishing and how to protect yourself, please see the following resources:</p>
+        <ul>
+          <li><a href="https://www.consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" target="_blank">FTC: How to Recognize and Avoid Phishing Scams</a></li>
+          <li><a href="https://www.staysafeonline.org/stay-safe-online/protecting-yourself-scams/common-scams-consumers" target="_blank">National Cyber Security Alliance: Common Scams Consumers Should Know</a></li>
+          <li><a href="https://www.stopthinkconnect.org/topics/protect-yourself-phishing-attacks" target="_blank">Stop. Think. Connect.: Protect Yourself from Phishing Attacks</a></li>
+        </ul>
+
+    </div>
+</body>
+</html>

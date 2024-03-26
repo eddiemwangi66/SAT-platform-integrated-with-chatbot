@@ -15,7 +15,7 @@
         overflow-y: hidden;
         padding-top:20px;
         padding-right: 1rem;
-        padding-left: 1rem;
+        padding-left: -5px;
         border-right: 1px solid #08778b;
         background-color: #f8f9fa;
         margin-top: 55px;
@@ -27,7 +27,7 @@
     
      .content {
                 margin-top: 20px;
-                padding-left: 40px; /* Adjusted for the left-nav width and additional space */
+                padding-left: 45px; /* Adjusted for the left-nav width and additional space */
             }
     .navbar-right {
                 margin-left: auto;
@@ -46,8 +46,10 @@
          it’s often easier to trick people into providing them with access, information, or
           money than it is to exploit a software or network vulnerability.</p>
    <p>
-    social engineering is a manipulation technique that exploits human error to gain private information,
-     access, or valuables. It's an umbrella term that can apply to a broad range of attacks. Each technique
+    <b>social engineering is a manipulation technique that exploits human error to gain private information,
+     access, or valuables.Social engineering is a psychological manipulation technique used by attackers to
+      trick individuals into divulging confidential information, performing actions, or bypassing security controls. </b>
+       It's an umbrella term that can apply to a broad range of attacks. Each technique
       is designed to capitalize on the trusting nature of people and their willingness to help. 
    </p>
      <p>Social engineering is a form of deception that takes advantage of the way people think. It preys on 
@@ -65,6 +67,42 @@
             and their willingness to help. In this reading, you will learn about specific social engineering 
             tactics to watch out for. You’ll also learn ways that organizations counter these threats.</p>
 
+        <h5>Types of Social Engineering Attacks:</h5>    
+        <p>1) Phishing: Attackers send fraudulent emails, messages, or websites to trick individuals into providing sensitive information,
+             such as passwords or financial details. <br>
+           2) Pretexting: Attackers create a fabricated scenario or pretext to trick individuals into revealing information or performing actions. <br>
+           3) Baiting: Attackers offer something enticing, such as a free download or USB drive, containing malware or malicious links. <br>
+           4) Spear Phishing: Targeted phishing attacks customized for specific individuals or organizations, often using personal information to increase
+             credibility. <br>
+           5) Vishing (Voice Phishing): Attackers use phone calls or voice messages to deceive individuals into providing sensitive information or 
+            performing actions. <br>
+           6) Smishing (SMS Phishing): Phishing attacks conducted via text messages, typically containing malicious links or requests for sensitive
+             information. <br>
+           7) Tailgating: Physically following someone into a restricted area or building by exploiting their politeness or trust. <br>
+           8) Impersonation: Pretending to be someone else, such as a trusted colleague or authority figure, to gain access to information or resources.
+             
+        </p>
+
+           <h5>Recognizing Social Engineering Attempts</h5>  
+           <p>1) Requests for sensitive information, such as passwords, account numbers, or personal details, especially via unsolicited emails or messages. <br>
+           2) Urgent or alarming messages urging immediate action, often with threats of consequences for non-compliance. <br>
+           3) Unusual or unexpected requests, especially from unfamiliar or suspicious sources. <br>
+           4) Requests for information that should not be shared publicly or with unauthorized individuals. <br>
+           5) Unusual or uncharacteristic behavior from supposed colleagues or acquaintances. <br>
+
+           </p>
+
+           <h5>Mitigating Social Engineering Risks:</h5>
+           <p>1) Employee Training: Provide comprehensive training and awareness programs to educate employees about social engineering tactics 
+            and how to recognize and respond to them. <br>
+            2) Security Policies and Procedures: Establish clear policies and procedures for handling sensitive information and verifying requests
+             for information or actions. <br>
+           3) Verification and Validation: Encourage individuals to verify requests for sensitive information or actions through alternative channels, 
+           such as contacting known phone numbers or email addresses. <br>
+           4) Technological Controls: Implement email filtering, spam detection, and intrusion detection systems to identify and block social engineering
+            attacks. <br>
+           5) Incident Response: Develop incident response plans to quickly detect, respond to, and mitigate the impact of social engineering attacks.</p>
+
             <div class="container mt-5 content">
                 <h2>Cybersecurity Topics covered</h2>
                 <p>In this section we shall cover some of the crucial topics that you as a user should be educated about and made
@@ -72,10 +110,9 @@
                     -- as well as, ideally, individual users' roles -- some topics are universally important. </p>
                     <p>We shall dive deeply into the topics in the following page. click the next button below to continue.</p>
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item "><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active"><a class="page-link" href="{{ url_for('password') }}">2</a></li>
-                    <li class="page-item"><a class="page-link" href="{{ url_for('phishing_education') }}">3</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ url_for('password') }}">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="{{ url_for('Social_engineering') }}">social engineering</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ url_for('phishing_education') }}">phishing education</a></li>
                     <li class="page-item"><a class="page-link" href="{{ url_for('phishing_education') }}">Next</a></li>
                 </ul>
             </div>

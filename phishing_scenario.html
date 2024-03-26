@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Education{% endblock %}
+{% block title %}Phishing_scenario{% endblock %}
 
 {% block content %}
 <style>
@@ -27,7 +27,6 @@ body {
  .content {
             margin-top: 20px;
             padding-left: 45px; /* Adjusted for the left-nav width and additional space */
-    
         }
 .navbar-right {
             margin-left: auto;
@@ -39,22 +38,22 @@ body {
     margin-top: 10px;
     padding-left: 80px;
 }
-.center{
-text-align: center;
-}
-
 </style>
     <div class="container mt-5 content">
-
-    <h1>Cybersecurity Quiz</h1>
-    <div class="center">
-    <form method="post" action="{{ url_for('quiz_route') }}">
-        <p>{{ quiz.question }}</p>
-        {% for option in quiz.options %}
-            <input type="radio" name="user_answer" value="{{ loop.index }}">{{ option }}<br>
-        {% endfor %}
-        <button type="submit">Submit Answer</button>
+    <h1>Phishing Scenario</h1>
+    <form method="post">
+        <p>{{ question }}</p>
+        <input type="radio" name="choice" value="phishing"> Click on the link in the email<br>
+        <input type="radio" name="choice" value="ignore"> Ignore the email<br>
+        <input type="radio" name="choice" value="report"> Report the email as phishing<br>
+        <input type="hidden" name="username" value="{{ request.args.get('username') }}">
+        <button type="submit">Submit</button>
     </form>
-    </div>
+
+    {% if scenario_result is defined %}
+        <h2>Result:</h2>
+        <p>{{ scenario_result.result_text }}</p>
+        <a href="{{ url_for('malware_scenario_route') }}">Proceed to the next scenario</a>
+    {% endif %}
 </div>
 {% endblock %}

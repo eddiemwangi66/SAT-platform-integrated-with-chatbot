@@ -15,7 +15,7 @@
     overflow-y: hidden;
     padding-top:20px;
     padding-right: 1rem;
-    padding-left: 1rem;
+    padding-left: -5px;
     border-right: 1px solid #08778b;
     background-color: #f8f9fa;
     margin-top: 55px;
@@ -27,7 +27,7 @@ body {
 
  .content {
             margin-top: 20px;
-            padding-left: 40px; /* Adjusted for the left-nav width and additional space */
+            padding-left: 45px; /* Adjusted for the left-nav width and additional space */
         }
 .navbar-right {
             margin-left: auto;
@@ -48,6 +48,9 @@ body {
                 unsuspecting recipients into acting against their better judgment, causing them to break security procedures.</p>
                 <p>An attack that attempts to misdirect legitimate users to malicious websites through the abuse of URLs or hyperlinks
                     in emails could be considered phishing.</p>
+                    <p>Phishing is a cyber attack method that involves sending fraudulent emails, text messages, or other communication, posing as a reputable organization or individual.
+                        The goal is to trick recipients into providing sensitive information, such as login credentials, financial details, or personal information, or to download malware
+                         onto their device.</p>
         <h3>The origins of phishing</h3>
 
        <p>Phishing has been around since the early days of the internet. It can be traced back to the 1990s. At the
@@ -58,15 +61,37 @@ body {
         <h2>Types of phishing</h2>  
         <p>A number of techniques began to appear around this time period, many of which are still used today. 
             There are five common types of phishing that every security analyst should know:</p>
-            <p>Email phishing is a type of attack sent via email in which threat actors send messages pretending to be a 
+            <p>1) Email phishing is a type of attack sent via email in which threat actors send messages pretending to be a 
                 trusted person or entity.</p>
-                <p>Smishing is a type of phishing that uses Short Message Service (SMS), a technology that powers text messaging.
+                <p>2) Smishing is a type of phishing that uses Short Message Service (SMS), a technology that powers text messaging.
                  Smishing covers all forms of text messaging services, including Apple’s iMessages, WhatsApp, and other chat mediums on phones.
                 </p>
-                <p>Vishing refers to the use of voice calls or voice messages to trick targets into providing personal information over the phone.</p>
-               <p> Spear phishing is a subset of email phishing in which specific people are purposefully targeted, such as the accountants of a small 
+                <p>3) Vishing refers to the use of voice calls or voice messages to trick targets into providing personal information over the phone.</p>
+               <p>4) Spear phishing is a subset of email phishing in which specific people are purposefully targeted, such as the accountants of a small 
                 business.</p>
-                <p>Whaling refers to a category of spear phishing attempts that are aimed at high-ranking executives in an organization.</p>
+                <p>5) Whaling refers to a category of spear phishing attempts that are aimed at high-ranking executives in an organization.</p>
+
+        <h5>Common Characteristics of Phishing Emails:</h5>
+        <p>
+           1) Urgent or threatening language, designed to evoke fear or urgency. <br>
+           2) Requests for sensitive information such as passwords, account numbers, or Social Security numbers. <br>
+           3) Spelling or grammatical errors, unusual sender addresses, or generic greetings. <br>
+           4) Suspicious links or attachments, often masked to appear legitimate. <br>
+           5) Suspicious Sender: Check the sender's email address or phone number for inconsistencies or suspicious domains. <br>
+           6) Urgent Requests: Beware of emails or messages that create a sense of urgency, such as threats of account closure or legal action. <br>
+        </p>
+
+        <h5>Mitigating Phishing Risks</h5>
+        <p> 1) Security Awareness Training: Educate employees about phishing tactics, warning signs, and best practices for identifying and reporting 
+            phishing attempts. <br>
+            2) Email Filtering: Implement email filtering solutions to detect and block phishing emails before they reach users' inboxes. <br>
+            3) Multi-Factor Authentication (MFA): Enable MFA to add an extra layer of security, even if credentials are compromised through phishing. <br>
+            4) Phishing Simulation Exercises: Conduct simulated phishing campaigns to assess employee susceptibility and reinforce training efforts. <br>
+            5) Incident Response Plan: Develop a response plan for handling phishing incidents, including procedures for reporting and mitigating potential 
+            impacts. <br>
+            6) Reporting Mechanisms: Establish clear procedures for reporting suspicious emails or phishing attempts to IT or security teams. <br>
+        </p>
+
         <div class="container mt-5 content">
             <h2>Cybersecurity Topics covered</h2>
             <p>In this section we shall cover some of the crucial topics that you as a user should be educated about and made
@@ -74,11 +99,9 @@ body {
                 -- as well as, ideally, individual users' roles -- some topics are universally important. </p>
                 <p>We shall dive deeply into the topics in the following page. click the next button below to continue.</p>
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="{{ url_for('password') }}">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="{{ url_for('password') }}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('Social_engineering') }}">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="{{ url_for('phishing_education') }}">phishing education</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('education') }}">Next</a></li>
             </ul>
         </div>
     </div>

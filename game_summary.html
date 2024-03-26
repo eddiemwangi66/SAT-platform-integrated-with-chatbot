@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Education{% endblock %}
+{% block title %}Game Summary{% endblock %}
 
 {% block content %}
 <style>
@@ -27,7 +27,6 @@ body {
  .content {
             margin-top: 20px;
             padding-left: 45px; /* Adjusted for the left-nav width and additional space */
-    
         }
 .navbar-right {
             margin-left: auto;
@@ -39,22 +38,16 @@ body {
     margin-top: 10px;
     padding-left: 80px;
 }
-.center{
-text-align: center;
-}
-
 </style>
     <div class="container mt-5 content">
-
-    <h1>Cybersecurity Quiz</h1>
-    <div class="center">
-    <form method="post" action="{{ url_for('quiz_route') }}">
-        <p>{{ quiz.question }}</p>
-        {% for option in quiz.options %}
-            <input type="radio" name="user_answer" value="{{ loop.index }}">{{ option }}<br>
+    <h1>Game Summary for {{ username }}</h1>
+    <ul>
+        {% for scenario, user_choice, points_earned in scenario_results %}
+        <li>{{ scenario }}: {{ user_choice }} (Points earned: {{ points_earned }})</li>
         {% endfor %}
-        <button type="submit">Submit Answer</button>
-    </form>
-    </div>
+    </ul>
+
+    <p> Do you want to play again <a href="{{ url_for('game_index_route') }}">Click Play Again</a></p>
+   <p> Do you want to view the leaderboard? <a href="{{ url_for('show_leaderboard_route') }}"> Click Leaderboard</a></p>
 </div>
 {% endblock %}

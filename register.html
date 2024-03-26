@@ -10,67 +10,93 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
-    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
     <title>Registration</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+ <style>
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f4f4f4;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form {
+    border: 3px solid #f1f1f1;
         }
 
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
+ button {
+  background-color: #0468aa;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
 
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .message {
-            color: red;
-            margin-bottom: 16px;
-        }
+.container {
+ padding: 16px;
+}
     </style>
 </head>
 <body ng-app="">
-    <h2>Registration Form</h2>
-    <form action="{{ url_for('register') }}" method="post" name="myForm">
-        <label for="email">Email:</label>
-        <input ng-model="myInput" type="email" id="email" name="email" required>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center mb-4">Registration Form</h2>
+                <p>Please fill in this form to create an account to gain access to the SAT platform.</p>
+                <form action="{{ url_for('register') }}" method="post" name="myForm">
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group mb-3 position-relative">
+                        <label for="password" class="form-label"><b>Password:</b></label>
+                        <input type="password" class="form-control" id="password" name="password" ng-model="password" placeholder="Enter your password" required>
+                    </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+                    <div class="form-group mb-3">
+                        <label for="repeat-password" class="form-label"><b>Repeat Password:</b></label>
+                        <input type="password" class="form-control" id="repeat-password" name="repeat-password" ng-model="repeatPassword" placeholder="Repeat your password" required>
+                        <p id="password-error-message" style="color:red; display: none;"></p>
+                    </div>
 
-        <label for="username">Username:</label>
-        <input type="username" id="username" name="username" required>
+                    <div class="form-group mb-3">
+                        <label for="username" class="form-label"><b>Username:</b></label>
+                        <input type="username" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
 
-        <button type="submit">Register</button>
-    </form>
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.querySelector('form').addEventListener('submit', function (event) {
+            if (document.getElementById('password').value !== document.getElementById('repeat-password').value) {
+                document.getElementById('password-error-message').innerText = 'Passwords do not match.';
+                document.getElementById('password-error-message').style.display = 'block';
+                event.preventDefault();
+            }
+            else {
+                document.getElementById('password-error-message').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

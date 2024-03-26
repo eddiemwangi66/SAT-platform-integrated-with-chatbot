@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}>Error Sending Phishing Email{% endblock %}
+    
+{% block content %}
+ <style>
+    .left-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        overflow-y: hidden;
+        padding-top:20px;
+        padding-right: 1rem;
+        padding-left:-5px;
+        border-right: 1px solid #08778b;
+        background-color: #f8f9fa;
+        margin-top: 55px;
+    }
+    body {
+                padding-top:0px; /* Adjusted to accommodate the fixed navbar and provide space */
+                margin: 0;
+            }
+    
+     .content {
+                margin-top: 20px;
+                padding-left: 40px; /* Adjusted for the left-nav width and additional space */
+            }
+    .navbar-right {
+                margin-left: auto;
+                padding-left: auto;
+                padding-right: 12%;
+            }       
+            
+            .navigation-buttons {
+        margin-top: 10px;
+        padding-left: 80px;
+    }
+ </style>    
+ 
+    <div class="container mt-5 content"> 
+    <h1>Error Sending Phishing Email</h1>
+    <p>An error occurred while sending the phishing email: <strong>{{ error_message }}</strong>.</p>
+    </div>
+{% endblock %}

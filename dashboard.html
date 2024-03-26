@@ -14,11 +14,23 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <!-- Add the CSS files first -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         /* Custom Styles */
         body {
             padding-top:20px; /* Adjusted to accommodate the fixed navbar and provide space */
             margin: 0;
+            background-color: #f4f4f4;
+            font-size: 17px;
+            line-height: 1.5;
+
         }
 
         .navbar-brand {
@@ -86,7 +98,7 @@
     <!-- Navigation Bar -->
     
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-        <a class="navbar-brand" href="#">SAT</a>
+        <a class="navbar-brand" href="{{ url_for('dashboard') }}">SAT</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -98,8 +110,9 @@
 
                 
                 
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('phishing') }}">Phishing</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('phishing_route') }}">Phishing</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('chatbot') }}">Chatbot</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('home_route')}}"> interactive modules</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item"><a class="nav-link"  href="{{ url_for('register') }}"><span
@@ -117,8 +130,8 @@
                                     <li><a class="dropdown-item" href="#">Username:{{ user.username }}</a></li>
                                     <li><a class="dropdown-item" href="#">Email:  {{ user.email }}</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li class="nav-item"><a class="dropdown-item" data-toggle="tab" href="{{ url_for('logout') }}"><span
-                                        class="glyphicon glyphicon-user"></span>Logout</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ url_for('logout') }}">
+                                        <span class="glyphicon glyphicon-user"></span>Logout</a></li>
                                   </ul>
                                 </li>
                               </ul>
@@ -138,28 +151,16 @@
                 <a class="nav-link" href="{{ url_for('education') }}">Education</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Simulation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Gamification</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Newsletter</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Incident Report</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('register') }}">Page 5</a>
+                <a class="nav-link" href="{{url_for('game_index_route')}}">Gamification</a>
             </li>
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Education 
+                <a class="dropdown-toggle" data-toggle="dropdown" href="{{ url_for('education') }}">Education 
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="#">Password Security</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Page 1-2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Page 1-3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('password') }}">Password Security</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('Social_engineering') }}">Social engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('phishing_education') }}">Phishing education</a></li>
                 </ul>
             </li>
             
@@ -167,19 +168,25 @@
         </ul>
     </div>
 
+    <script>
+        $(function () {
+            $('[data-toggle="dropdown"]').dropdown()
+        })
+    </script>    
+
     <!-- Main Content -->
     <div class="container mt-5 content">
         <!-- Main content sections here -->
         {% if user %}
         <section id="home">
-            <h2>Welcome to our Cybersecurity Training Platform</h2>
-            <h4>Welcome to Your Security Awareness Training platform, <span style="color: #bd3232;">{{ user.username }}!</span>
-            </h4>
-            <p>This is the Email you have used to log in to our platform: <span style="font-style: italic; color: rgb(92, 92, 89);">{{ user.email }}</span>.
+            <h2><b>Welcome to our Cybersecurity Training Platform</b></h2>
+            <h3>Welcome to Your Security Awareness Training platform, <span style="color: #bd3232;">{{ user.username }}!</span>
+            </h3>
+            <p>This is the Email you have used to log in to our platform: <span style="font-style: italic; color: rgb(92, 92, 89); font-weight: bold;">{{ user.email }}</span>.
                  We encourage that you ensure that this is your email. From now on we shall use this email to trace your activities and help
                  to ensure that you are equipped profeciently in the world of cybersecurity. </p>
             <p>We appreciate the dedication and the trust that you have given this platform so as to gain knowledge and 
-                skills about cybersecurity.Similar to your email this is your Username: <span style="font-style: italic; color: rgb(92, 92, 89);">{{ user.username }}</span>
+                skills about cybersecurity.Similar to your email this is your Username: <span style="font-style: italic; color: rgb(92, 92, 89); font-weight: bold;">{{ user.username }}</span>
             .We will use this account details so as to communicate with you and also have a personal relationship with you as you 
             embark this training</p>
             <p>This is your gateway to enhanced cybersecurity awareness and training. In the digital age, safeguarding
@@ -202,15 +209,7 @@
 
         <!-- Add other sections as needed -->
 
-        <section id="newsletter" class="mt-4">
-            <h3>Newsletter</h3>
-            <p>Subscribe to our newsletter for regular updates and articles on cybersecurity.  Stay 
-                tuned for regular updates, industry insights, and tips to stay one step ahead in the ever-evolving 
-                landscape of cybersecurity.xpect our newsletter in your inbox  with a curated selection of articles 
-                designed to elevate your reading experience. Feel free to share your thoughts, suggestions, or even 
-                contribute your stories  because this newsletter is about creating a community where everyone has a voice.</p>
-                 
-        </section>
+    
         {% else %}
         <p>Error fetching user data. Please try again.</p>
         {% endif %}
@@ -218,17 +217,17 @@
         <div class="container mt-5">
             <h3>Education</h3>
             <p>We invite you to our educcation page.  the hub for knowledge, exploration, and growth! We're delighted to
-                 have you join our community of passionate learners.our mission is to make learning accessible, engaging,
+                 have you join our community of passionate learners.Our mission is to make learning accessible, engaging,
                   and meaningful. Whether you're a student, a professional looking to upskill, or someone curious about 
                   a new subject, you're in the right place.As you embark on your educational journey, remember that learning 
                   is a lifelong adventure. The more you explore, the more you grow. Feel free to reach out if you have any questions or if there's a specific topic you'd like to see covered.</p>
             <p>To continue with your cybesecurity education and awareness click the  button below.</p>
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('dashboard') }}">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="{{ url_for('dashboard') }}">Home</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('education') }}" >Education</a></li>
+                <li class="page-item"><a class="page-link" href="{{url_for('game_index_route')}}">Game</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url_for('education') }}">Next</a></li>
             </ul>
         </div>
     </div>

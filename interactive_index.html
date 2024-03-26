@@ -1,3 +1,4 @@
+<!--education.html -->
 {% extends 'base.html' %}
 
 {% block title %}Education{% endblock %}
@@ -14,7 +15,7 @@
     overflow-y: hidden;
     padding-top:20px;
     padding-right: 1rem;
-    padding-left: -5px;
+    padding-left:-5px;
     border-right: 1px solid #08778b;
     background-color: #f8f9fa;
     margin-top: 55px;
@@ -26,8 +27,7 @@ body {
 
  .content {
             margin-top: 20px;
-            padding-left: 45px; /* Adjusted for the left-nav width and additional space */
-    
+            padding-left: 40px; /* Adjusted for the left-nav width and additional space */
         }
 .navbar-right {
             margin-left: auto;
@@ -39,22 +39,27 @@ body {
     margin-top: 10px;
     padding-left: 80px;
 }
-.center{
-text-align: center;
-}
-
 </style>
-    <div class="container mt-5 content">
 
-    <h1>Cybersecurity Quiz</h1>
-    <div class="center">
-    <form method="post" action="{{ url_for('quiz_route') }}">
-        <p>{{ quiz.question }}</p>
-        {% for option in quiz.options %}
-            <input type="radio" name="user_answer" value="{{ loop.index }}">{{ option }}<br>
-        {% endfor %}
-        <button type="submit">Submit Answer</button>
-    </form>
-    </div>
+<div class="container mt-5 content">    
+        <h1>Cybersecurity Interactive Training Platform</h1>
+   
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home_route') }}">Home</a></li>
+            <li><a href="{{ url_for('quiz_route') }}">Cybersecurity Quiz</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Welcome to our Cybersecurity Training Platform!</h2>
+        <p>Explore the various training modules and enhance your cybersecurity knowledge.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cybersecurity Training Platform</p>
+    </footer>
+
 </div>
 {% endblock %}
