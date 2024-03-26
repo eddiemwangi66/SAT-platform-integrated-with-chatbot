@@ -167,6 +167,1218 @@
     {
       "question": "thrat actor",
       "answer": " a person who wants to cause harm"
+    },
+    {
+      "question": "malware",
+      "answer": " Malware, short for malicious software, refers to any software intentionally designed to cause damage to a computer, server, client, or computer network. Malware encompasses a wide range of malicious software types, including viruses, worms, Trojans, ransomware, spyware, adware, and rootkits."
+    },
+    {
+      "question": "The CIA Triad",
+      "answer": " To define security, it has become common to use Confidentiality, Integrity and Availability, also known as the CIA triad. The purpose of these terms is to describe security using relevant and meaningful words that make security more understandable to management and users and define its purpose."
+    },
+    {
+      "question": "Confidentiality",
+      "answer": " Confidentiality relates to permitting authorized access to information, while at the same time protecting information from improper disclosure."
+    },
+    {
+      "question": "Integrity",
+      "answer": " Integrity is the property of information whereby it is recorded, used and maintained in a way that ensures its completeness, accuracy, internal consistency and usefulness for a stated purpose."
+    },
+    {
+      "question": "Availability",
+      "answer": "Availability means that systems and data are accessible at the time users need them."
+    },
+    {
+      "question": "Personally Identifiable Information (PII)",
+      "answer": "is a term related to the area of\u202fconfidentiality. It pertains to any data about an individual that could be used to identify them.\u202fOther terms related to confidentiality are protected health information (PHI) , which is information regarding one\u2019s health status, and classified or sensitive information, which includes trade secrets, research, business plans and intellectual property."
+    },
+    {
+      "question": "Authentication",
+      "answer": "This process of verifying or proving\u202fthe user\u2019s identification"
+    },
+    {
+      "question": "Non-repudiation",
+      "answer": "The inability to deny taking an action such as creating information, approving information and sending or receiving a message"
+    },
+    {
+      "question": "Privacy",
+      "answer": "The right of an individual to control the distribution of information about themselves"
+    },
+    {
+      "question": "Asset",
+      "answer": "Anything of value that is owned by an organization. Assets include both tangible items such as information systems and physical property and intangible assets such as intellectual property."
+    },
+    {
+      "question": "Administrative Controls ",
+      "answer": "Controls implemented through policy and procedures. Examples include access control processes and requiring multiple personnel to conduct a specific operation. Administrative controls in modern environments are often enforced in conjunction with physical and/or technical controls, such as an access-granting policy for new users that requires login and approval by the hiring manager."
+    },
+    {
+      "question": "Encryption",
+      "answer": ". The process and act of converting the message from its plaintext to ciphertext. Sometimes it is also referred to as enciphering. The two terms are sometimes used interchangeably in literature and have similar meanings."
+    },
+    {
+      "question": "Governance ",
+      "answer": "The process of how an organization is managed; usually includes all aspects of how decisions are made for that organization, such as policies, roles, and procedures the organization uses to make those decisions."
+    },
+    {
+      "question": "Impact",
+      "answer": "The magnitude of harm that could be caused by a threat\u2019s exercise of a vulnerability."
+    },
+    {
+      "question": "Information Security Risk",
+      "answer": "The potential adverse impacts to an organization\u2019s operations (including its mission, functions and image and reputation), assets, individuals, other organizations, and even the nation, which results from the possibility of unauthorized access, use, disclosure, disruption, modification or destruction of information and/or information systems."
+    },
+    {
+      "question": "International Organization of Standards (ISO)",
+      "answer": "The ISO develops voluntary international standards in collaboration with its partners in international standardization, the International Electro-technical Commission (IEC) and the International Telecommunication Union (ITU), particularly in the field of information and communication technologies."
+    },
+    {
+      "question": "Likelihood",
+      "answer": "The probability that a potential vulnerability may be exercised within the construct of the associated threat environment."
+    },
+    {
+      "question": "Likelihood of Occurrence ",
+      "answer": "A weighted factor based on a subjective analysis of the probability that a given threat is capable of exploiting a given vulnerability or set of vulnerabilities."
+    },
+    {
+      "question": "MFA",
+      "answer": "Using two or more distinct instances of the three factors of authentication (something you know, something you have, something you are) for identity verification."
+    },
+    {
+      "question": "National Institutes of Standards and Technology (NIST)",
+      "answer": " The NIST is part of the U.S. Department of Commerce and addresses the measurement infrastructure within science and technology efforts within the U.S. federal government. NIST sets standards in a number of areas, including information security within the Computer Security Resource Center of the Computer Security Divisions."
+    },
+    {
+      "question": "Risk ",
+      "answer": " A measure of the extent to which an entity is threatened by a potential circumstance or event."
+    },
+    {
+      "question": "Risk Acceptance",
+      "answer": "Determining that the potential benefits of a business function outweigh the possible risk impact/likelihood and performing that business function with no other action."
+    },
+    {
+      "question": "Risk Assessment",
+      "answer": "The process of identifying and analyzing risks to organizational operations (including mission, functions, image, or reputation), organizational assets, individuals and other organizations. The analysis performed as part of risk management which incorporates threat and vulnerability analyses and considers mitigations provided by security controls planned or in place. "
+    },
+    {
+      "question": "Risk Management Framework",
+      "answer": " A structured approach used to oversee and manage risk for an enterprise."
+    },
+    {
+      "question": "Risk Mitigation",
+      "answer": "Putting security controls in place to reduce the possible impact and/or likelihood of a specific risk."
+    },
+    {
+      "question": "Risk Transference",
+      "answer": "Paying an external party to accept the financial impact of a given risk."
+    },
+    {
+      "question": "Security Controls ",
+      "answer": "The management, operational and technical controls (i.e., safeguards or countermeasures) prescribed for an information system to protect the confidentiality, integrity and availability of the system and its information."
+    },
+    {
+      "question": "Sensitivity",
+      "answer": " A measure of the importance assigned to information by its owner, for the purpose of denoting its need for protection."
+    },
+    {
+      "question": "threat",
+      "answer": " Any circumstance or event with the potential to adversely impact organizational operations (including mission, functions, image or reputation), organizational assets, individuals, other organizations or the nation through an information system via unauthorized access, destruction, disclosure, modification of information and/or denial of service."
+    },
+    {
+      "question": "token",
+      "answer": "A physical object a user possesses and controls that is used to authenticate the user\u2019s identity."
+    },
+    {
+      "question": "Adverse Events",
+      "answer": "Events with a negative consequence, such as system crashes, network packet floods, unauthorized use of system privileges, defacement of a web page or execution of malicious code that destroys data."
+    },
+    {
+      "question": "breach",
+      "answer": "The loss of control, compromise, unauthorized disclosure, unauthorized acquisition or any similar occurrence where: a person other than an authorized user accesses or potentially accesses personally identifiable information; or an authorized user accesses personally identifiable information for other than an authorized purpose"
+    },
+    {
+      "question": "Business Continuity",
+      "answer": " Actions, processes and tools for ensuring an organization can continue critical operations during a contingency.\u202f"
+    },
+    {
+      "question": "Business Impact Analysis (BIA)",
+      "answer": "An analysis of an information system\u2019s requirements, functions, and interdependencies used to characterize system contingency requirements and priorities in the event of a significant disruption."
+    },
+    {
+      "question": "Disaster Recovery (DR) ",
+      "answer": "In information systems terms, the activities necessary to restore IT and communications services to an organization during and after an outage, disruption or disturbance of any kind or scale.\u202f"
+    },
+    {
+      "question": "Event",
+      "answer": " Any observable occurrence in a network or system."
+    },
+    {
+      "question": "Exploit",
+      "answer": "A particular attack. It is named this way because these attacks exploit system vulnerabilities.\u202f"
+    },
+    {
+      "question": "Incident",
+      "answer": "An event that actually or potentially jeopardizes the confidentiality, integrity or availability of an information system or the information the system processes, stores or transmits."
+    },
+    {
+      "question": "Incident Handling or Incident Response\u202f(IR)",
+      "answer": "The process of detecting and analyzing incidents to limit the incident's effect."
+    },
+    {
+      "question": "Incident Response Plan (IRP) ",
+      "answer": "The documentation of a predetermined set of instructions or procedures to detect, respond to and limit consequences of a malicious cyberattack against an organization\u2019s information systems(s)."
+    },
+    {
+      "question": "Intrusion",
+      "answer": "A security event, or combination of security events, that constitutes a security incident in which an intruder gains, or attempts to gain, access to a system or system resource without authorization."
+    },
+    {
+      "question": "Security Operations Center",
+      "answer": " A centralized organizational function fulfilled by an information security team that monitors, detects and analyzes events on the network or system to prevent and resolve issues before they result in business disruptions."
+    },
+    {
+      "question": "Zero Day",
+      "answer": "  A previously unknown system vulnerability with the potential of exploitation without risk of detection or prevention because it does not, in general, fit recognized patterns, signatures or methods.\u202f "
+    },
+    {
+      "question": "Audit",
+      "answer": "   Independent review and examination of records and activities to assess the adequacy of system controls, to ensure compliance with established policies and operational procedures."
+    },
+    {
+      "question": "Defense in Depth",
+      "answer": "  Information security strategy integrating people, technology, and operations capabilities to establish variable barriers across multiple layers and missions of the organization. "
+    },
+    {
+      "question": "Discretionary Access Control (DAC) ",
+      "answer": "   A certain amount of access control is left to the discretion of the object\u2019s owner, or anyone else who is authorized to control the object\u2019s access. The owner can determine who should have access rights to an object and what those rights should be."
+    },
+    {
+      "question": "Insider Threat",
+      "answer": " An entity with authorized access that has the potential to harm an information system through destruction, disclosure, modification of data, and/or denial of service."
+    },
+    {
+      "question": " Layered Defense",
+      "answer": "The use of multiple controls arranged in series to provide several consecutive controls to protect an asset; also called defense in depth.\u202f"
+    },
+    {
+      "question": "Log Anomaly",
+      "answer": "A system irregularity that is identified when studying log entries which could represent events of interest for further surveillance."
+    },
+    {
+      "question": "Logging ",
+      "answer": "Collecting and storing user activities in a log, which is a record of the events occurring within an organization\u2019s systems and networks."
+    },
+    {
+      "question": "Principle of Least Privilege",
+      "answer": "The principle that users and programs should have only the minimum privileges necessary to complete their tasks. "
+    },
+    {
+      "question": " Privileged Account",
+      "answer": "An information system account with approved authorizations of a privileged user."
+    },
+    {
+      "question": "Ransomware",
+      "answer": "A type of malicious software that locks the computer screen or files, thus preventing or limiting a user from accessing their system and data until money is paid."
+    },
+    {
+      "question": "Role-based access control (RBAC)",
+      "answer": " An access control system that sets up user permissions based on roles."
+    },
+    {
+      "question": "Rule",
+      "answer": " An instruction developed to allow or deny access to a system by comparing the validated identity of the subject to an access control list.  "
+    },
+    {
+      "question": "Segregation of Duties",
+      "answer": "The practice of ensuring that an organizational process cannot be completed by a single person; forces collusion as a means to reduce insider threats. Also commonly known as Separation of Duties."
+    },
+    {
+      "question": "De-encapsulation",
+      "answer": "The opposite process of encapsulation, in which bundles of data are unpacked or revealed."
+    },
+    {
+      "question": "Domain Name Service (DNS)",
+      "answer": "This acronym can be applied to three interrelated elements: a service, a physical server and a network protocol."
+    },
+    {
+      "question": "File Transfer Protocol (FTP)",
+      "answer": "The internet protocol (and program) used to transfer files between hosts."
+    },
+    {
+      "question": "Hybrid cloud",
+      "answer": "A combination of public cloud storage and private cloud storage where some critical data resides in the enterprise\u2019s private cloud while other data is stored and accessible from a public cloud storage provider."
+    },
+    {
+      "question": "Infrastructure as a Service (IaaS)",
+      "answer": "The provider of the core computing, storage and network hardware and software that is the foundation upon which organizations can build and then deploy applications.\u202f IaaS is popular in the data center where software and servers are purchased as a fully outsourced service and usually billed on usage and how much of the resource is used."
+    },
+    {
+      "question": "Packet",
+      "answer": " Representation of data at Layer 3 of the Open Systems Interconnection (OSI) model."
+    },
+    {
+      "question": "Payment Card Industry Data Security Standard (PCI DSS)",
+      "answer": "  An information security standard administered by the Payment Card Industry Security Standards Council that applies to merchants and service providers who process credit or debit card transactions."
+    },
+    {
+      "question": "protocols",
+      "answer": " A set of rules (formats and procedures) to implement and control some type of association (that is, communication) between systems."
+    },
+    {
+      "question": "Software as a Service (SaaS)",
+      "answer": " The cloud customer uses the cloud provider\u2019s applications running within a cloud infrastructure. The applications are accessible from various client devices through either a thin client interface, such as a web browser or a program interface. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, storage, or even individual application capabilities, with the possible exception of limited user-specific application configuration settings."
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "Spoofing",
+      "answer": " Faking the sending address of a transmission to gain illegal entry into a secure system."
+    },
+    {
+      "question": "Wireless Area Network (WLAN)",
+      "answer": " A group of computers and devices that are located in the same vicinity, forming a network based on radio transmissions rather than wired connections. A Wi-Fi is network is a type of WLAN."
+    },
+    {
+      "question": "Private cloud",
+      "answer": "The phrase used to describe a cloud computing platform that is implemented within the corporate firewall, under the control of the IT department. A private cloud is designed to offer the same features and benefits of cloud systems, but removes a number of objections to the cloud computing model, including control over enterprise and customer data, worries about security, and issues connected to regulatory compliance."
+    },
+    {
+      "question": "Public cloud",
+      "answer": " The cloud infrastructure is provisioned for open use by the general public. It may be owned, managed, and operated by a business, academic, or government organization, or some combination of them. It exists on the premises of the cloud provider."
+    },
+    {
+      "question": "Platform as a Service (PaaS)",
+      "answer": " The web-authoring or application development middleware environment that allows applications to be built in the cloud before they\u2019re deployed as SaaS assets."
+    },
+    {
+      "question": "Application programming interface (API)",
+      "answer": "  A set of routines, standards, protocols, and tools for building software applications to access a web-based software application or web tool."
+    },
+    {
+      "question": "Cloud computing",
+      "answer": " A model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."
+    },
+    {
+      "question": "Community cloud",
+      "answer": " A system in which the cloud infrastructure is provisioned for exclusive use by a specific community of consumers from organizations that have shared concerns (e.g., mission, security requirements, policy and compliance considerations). It may be owned, managed and operated by one or more of the organizations in the community, a third party or some combination of them, and it may exist on or off premises. "
+    },
+    {
+      "question": "Denial-of-Service (DoS)",
+      "answer": " The prevention of authorized access to resources or the delaying of time-critical operations. (Time-critical may be milliseconds or it may be hours, depending upon the service provided.)"
+    },
+    {
+      "question": "Encapsulation ",
+      "answer": "Enforcement of data hiding and code hiding during all phases of software development and operational use. Bundling together data and methods is the process of encapsulation; its opposite process may be called unpacking, revealing, or using other terms. Also used to refer to taking any set of data and packaging it or hiding it in another data structure, as is common in network protocols and encryption."
+    },
+    {
+      "question": "Hardware",
+      "answer": "The physical parts of a computer and related devices."
+    },
+    {
+      "question": "Man-in-the-Middle ",
+      "answer": "An attack where the adversary positions himself in between the user and the system so that he can intercept and alter data traveling between them."
+    },
+    {
+      "question": "Simple Mail Transport Protocol (SMTP) ",
+      "answer": "The standard communication protocol for sending and receiving emails between senders and receivers."
+    },
+    {
+      "question": "Transport Control Protocol/Internet Protocol (TCP/IP) Model",
+      "answer": "Internetworking protocol model created by the IETF, which specifies four layers of functionality: Link layer (physical communications), Internet Layer (network-to-network communication), Transport Layer (basic channels for connections and connectionless exchange of data between hosts), and Application Layer, where other protocols and user applications programs make use of network services."
+    },
+    {
+      "question": "Virtual Local Area Network (VLAN)",
+      "answer": "A logical group of workstations, servers, and network devices that appear to be on the same LAN despite their geographical distribution."
+    },
+    {
+      "question": "VPN",
+      "answer": "A virtual private network (VPN), built on top of existing networks, that can provide a secure communications mechanism for transmission between networks."
+    },
+    {
+      "question": "Zero Trust",
+      "answer": "Removing the design belief that the network has any trusted space. Security is managed at each possible level, representing the most granular asset. Microsegmentation of workloads is a tool of the model."
+    },
+    {
+      "question": "Firewalls",
+      "answer": " Devices that enforce administrative security policies by filtering incoming traffic based on a set of rules. "
+    },
+    {
+      "question": "Logical Access Control Systems",
+      "answer": "An automated system that controls an individual\u2019s ability to access one or more computer system resources, such as a workstation, network, application or database. A logical access control system requires the validation of an individual\u2019s identity through some mechanism, such as a PIN, card, biometric or other token. It has the capability to assign different access privileges to different individuals depending on their roles and responsibilities in an organization."
+    },
+    {
+      "question": "Mandatory Access Control ",
+      "answer": " Access control that requires the system itself to manage access controls in accordance with the organization\u2019s security policies."
+    },
+    {
+      "question": "Physical Access Controls ",
+      "answer": "  Controls implemented through a tangible mechanism. Examples include walls, fences, guards, locks, etc. In modern organizations, many physical control systems are linked to technical/logical systems, such as badge readers connected to door locks."
+    },
+    {
+      "question": "Technical Controls",
+      "answer": " The security controls (i.e., safeguards or countermeasures) for an information system that are primarily implemented and executed by the information system through mechanisms contained in the hardware, software or firmware components of the system."
+    },
+    {
+      "question": "Unix ",
+      "answer": " An operating system used in software development."
+    },
+    {
+      "question": "Business Continuity Plan (BCP) ",
+      "answer": " The documentation of a predetermined set of instructions or procedures that describe how an organization\u2019s mission/business processes will be sustained during and after a significant disruption."
+    },
+    {
+      "question": "Disaster Recovery Plan (DRP) ",
+      "answer": "The processes, policies and procedures related to preparing for recovery or continuation of an organization's critical business functions, technology infrastructure, systems and applications after the organization experiences a disaster. A disaster is when an organization\u2019s critical business function(s) cannot be performed at an acceptable level within a predetermined period following a disruption."
+    },
+    {
+      "question": "Vulnerability",
+      "answer": "Weakness in an information system, system security procedures, internal controls or implementation that could be exploited or triggered by a threat source. "
+    },
+    {
+      "question": "Adequate Security",
+      "answer": "Security commensurate with the risk and the magnitude of harm resulting from the loss, misuse or unauthorized access to or modification of information."
+    },
+    {
+      "question": "Artificial Intelligence(AI)",
+      "answer": "The ability of computers and robots to simulate human intelligence and behavior."
+    },
+    {
+      "question": "Authentication ",
+      "answer": "The act of identifying or verifying the eligibility of a station, originator, or individual to access specific categories of information. Typically, a measure designed to protect against fraudulent transmissions by establishing the validity of a transmission, message, station or originator."
+    },
+    {
+      "question": "Authorization",
+      "answer": "The right or a permission that is granted to a system entity to access a system resource."
+    },
+    {
+      "question": "Availability",
+      "answer": "Ensuring timely and reliable access to and use of information by authorized users."
+    },
+    {
+      "question": "Bot",
+      "answer": " Malicious code that acts like a remotely controlled \u201crobot\u201d for an attacker, with other Trojan and worm capabilities."
+    },
+    {
+      "question": "Classified or Sensitive Information",
+      "answer": "  Information that has been determined to require protection against unauthorized disclosure and is marked to indicate its classified status and classification level when in documentary form."
+    },
+    {
+      "question": "Confidentiality",
+      "answer": "The characteristic of data or information when it is not made available or disclosed to unauthorized persons or processes."
+    },
+    {
+      "question": "Criticality",
+      "answer": " A measure of the degree to which an organization depends on the information or information system for the success of a mission or of a business function. "
+    },
+    {
+      "question": "Data Integrity",
+      "answer": "The property that data has not been altered in an unauthorized manner. Data integrity covers data in storage, during processing and while in transit."
+    },
+    {
+      "question": "General Data Protection Regulation (GDPR) ",
+      "answer": " In 2016, the European Union passed comprehensive legislation that addresses personal privacy, deeming it an individual human right. "
+    },
+    {
+      "question": "Health Insurance Portability and Accountability Act (HIPAA) ",
+      "answer": " This U.S. federal law is the most important healthcare information regulation in the United States. It directs the adoption of national standards for electronic healthcare transactions while protecting the privacy of individual's health information. Other provisions address fraud reduction, protections for individuals with health insurance and a wide range of other healthcare-related activities. Est. 1996."
+    },
+    {
+      "question": "Personally Identifiable Information (PII)",
+      "answer": " The National Institute of Standards and Technology, known as NIST, in its Special Publication 800-122 defines PII as \u201cany information about an individual maintained by an agency, including (1) any information that can be used to distinguish or trace an individual\u2019s identity, such as name, Social Security number, date and place of birth, mother\u2019s maiden name, or biometric records; and (2) any other information that is linked or linkable to an individual, such as medical, educational, financial and employment information.\u201d"
+    },
+    {
+      "question": "Probability",
+      "answer": " The chances, or likelihood, that a given threat is capable of exploiting a given vulnerability or a set of vulnerabilities."
+    },
+    {
+      "question": "Protected Health Information (PHI)",
+      "answer": " Information regarding health status, the provision of healthcare or payment for healthcare as defined in HIPAA (Health Insurance Portability and Accountability Act)."
+    },
+    {
+      "question": "Qualitative Risk Analysis ",
+      "answer": "A method for risk analysis that is based on the assignment of a descriptor such as low, medium or high."
+    },
+    {
+      "question": "Quantitative Risk Analysis ",
+      "answer": "A method for risk analysis where numerical values are assigned to both impact and likelihood based on statistical probabilities and monetarized valuation of loss or gain."
+    },
+    {
+      "question": "Risk Management ",
+      "answer": "The process of identifying, evaluating and controlling threats, including all the phases of risk context (or frame), risk assessment, risk treatment and risk monitoring."
+    },
+    {
+      "question": "Risk Tolerance ",
+      "answer": "The level of risk an entity is willing to assume in order to achieve a potential desired result. Risk threshold, risk appetite and acceptable risk are also terms used synonymously with risk tolerance"
+    },
+    {
+      "question": "Risk Treatment",
+      "answer": "The determination of the best way to address an identified risk. "
+    },
+    {
+      "question": "Single-Factor Authentication",
+      "answer": " Use of just one of the three available factors (something you know, something you have, something you are) to carry out the authentication process being requested."
+    },
+    {
+      "question": "System Integrity",
+      "answer": " The quality that a system has when it performs its intended function in an unimpaired manner, free from unauthorized manipulation of the system, whether intentional or accidental."
+    },
+    {
+      "question": "Threat Actor",
+      "answer": "An individual or a group that attempts to exploit vulnerabilities to cause or force a threat to occur."
+    },
+    {
+      "question": "Threat Vector",
+      "answer": "The means by which a threat actor carries out their objectives."
+    },
+    {
+      "question": "Application Server",
+      "answer": " A computer responsible for hosting applications to user workstations."
+    },
+    {
+      "question": "Asymmetric Encryption",
+      "answer": " An algorithm that uses one key to encrypt and a different key to decrypt the input plaintext."
+    },
+    {
+      "question": "Ciphertext",
+      "answer": "The altered form of a plaintext message so it is unreadable for anyone except the intended recipients. In other words, it has been turned into a secret."
+    },
+    {
+      "question": "Classification",
+      "answer": "Classification identifies the degree of harm to the organization, its stakeholders or others that might result if an information asset is divulged to an unauthorized person, process or organization. In short, classification is focused first and foremost on maintaining the confidentiality of the data, based on the data sensitivity."
+    },
+    {
+      "question": "Cryptography",
+      "answer": " The study or applications of methods to secure or protect the meaning and content of messages, files, or other information, usually by disguise, obscuration, or other transformations of that content and meaning. "
+    },
+    {
+      "question": "Configuration management",
+      "answer": "A process and discipline used to ensure that the only changes made to a system are those that have been authorized and validated."
+    },
+    {
+      "question": "Data Loss Prevention (DLP)",
+      "answer": "System capabilities designed to detect and prevent the unauthorized use and transmission of information. "
+    },
+    {
+      "question": "Decryption",
+      "answer": "The reverse process from encryption. It is the process of converting a ciphertext message back into plaintext through the use of the cryptographic algorithm and the appropriate key for decryption (which is the same for symmetric encryption, but different for asymmetric encryption). This term is also used interchangeably with the \u201cdeciphering.\u201d"
+    },
+    {
+      "question": "Degaussing",
+      "answer": " A technique of erasing data on disk or tape (including video tapes) that, when performed properly, ensures that there is insufficient magnetic remanence to reconstruct data."
+    },
+    {
+      "question": "Digital Signature",
+      "answer": "The result of a cryptographic transformation of data which, when properly implemented, provides the services of origin authentication, data integrity, and signer non-repudiation."
+    },
+    {
+      "question": "Operating System",
+      "answer": "The software \u201cmaster control application\u201d that runs the computer. It is the first program loaded when the computer is turned on, and its main component, the kernel, resides in memory at all times. The operating system sets the standards for all application programs (such as the Web server) that run in the computer. The applications communicate with the operating system for most user interface and file management operations."
+    },
+    {
+      "question": "Patch",
+      "answer": "A software component that, when installed, directly modifies files or device settings related to a different software component without changing the version number or release details for the related software component."
+    },
+    {
+      "question": "Patch Management",
+      "answer": "The systematic notification, identification, deployment, installation and verification of operating system and application software code revisions. These revisions are known as patches, hot fixes, and service packs."
+    },
+    {
+      "question": "Plaintext",
+      "answer": "A message or data in its natural format and in readable form; extremely vulnerable from a confidentiality perspective."
+    },
+    {
+      "question": "Records ",
+      "answer": "The recordings (automated and/or manual) of evidence of activities performed or results achieved (e.g., forms, reports, test results), which serve as a basis for verifying that the organization and the information system are performing as intended. Also used to refer to units of related data fields (i.e., groups of data fields that can be accessed by a program and that contain the complete set of information on particular items)."
+    },
+    {
+      "question": "Security Governance",
+      "answer": " The entirety of the policies, roles, and processes the organization uses to make security decisions in an organization."
+    },
+    {
+      "question": "Social engineering",
+      "answer": "Tactics to infiltrate systems via email, phone, text, or social media, often impersonating a person or agency in authority or offering a gift. A low-tech method would be simply following someone into a secure building."
+    },
+    {
+      "question": "Web Server",
+      "answer": " A computer that provides World Wide Web (WWW) services on the Internet. It includes the hardware, operating system, Web server software, and Web site content (Web pages). If the Web server is used internally and not by the public, it may be known as an \u201cintranet server.\u201d"
+    },
+    {
+      "question": "Whaling Attack ",
+      "answer": " Phishing attacks that attempt to trick highly placed officials or private individuals with sizable assets into authorizing large fund wire transfers to previously unknown entities. "
+    },
+    {
+      "question": "Biometric",
+      "answer": " Biological characteristics of an individual, such as a fingerprint, hand geometry, voice, or iris patterns."
+    },
+    {
+      "question": "Cybersecurity (or security)",
+      "answer": " The practice of ensuring confidentiality, integrity, and availability of information by protecting networks, devices, people, and data from unauthorized access or criminal exploitation"
+    },
+    {
+      "question": "Cloud security",
+      "answer": " The process of ensuring that assets stored in the cloud are properly configured and access to those assets is limited to authorized users"
+    },
+    {
+      "question": "Network security",
+      "answer": "The practice of keeping an organization's network infrastructure secure from unauthorized access"
+    },
+    {
+      "question": "Security posture",
+      "answer": "An organization\u2019s ability to manage its defense of critical assets and data and react to change "
+    },
+    {
+      "question": "Adversarial artificial intelligence (AI)",
+      "answer": " A technique that manipulates artificial intelligence (AI) and machine learning (ML) technology to conduct attacks more efficiently"
+    },
+    {
+      "question": "Computer virus",
+      "answer": "  Malicious code written to interfere with computer operations and cause damage to data and software"
+    },
+    {
+      "question": "Cryptographic attack",
+      "answer": "An attack that affects secure forms of communication between a sender and intended recipient"
+    },
+    {
+      "question": "Hacker",
+      "answer": "Any person who uses computers to gain access to computer systems, networks, or data"
+    },
+    {
+      "question": "Password attack",
+      "answer": " An attempt to access password secured devices, systems, networks, or data"
+    },
+    {
+      "question": "Phishing",
+      "answer": " The use of digital communications to trick people into revealing sensitive data or deploying malicious software"
+    },
+    {
+      "question": "Physical attack",
+      "answer": " A security incident that affects not only digital but also physical environments where the incident is deployed"
+    },
+    {
+      "question": "Physical social engineering",
+      "answer": "An attack in which a threat actor impersonates an employee, customer, or vendor to obtain unauthorized access to a physical location"
+    },
+    {
+      "question": "Social engineering",
+      "answer": "A manipulation technique that exploits human error to gain private information, access, or valuables"
+    },
+    {
+      "question": "Spear phishing",
+      "answer": " A malicious email attack targeting a specific user or group of users, appearing to originate from a trusted source"
+    },
+    {
+      "question": "USB baiting",
+      "answer": "An attack in which a threat actor strategically leaves a malware USB stick for an employee to find and install to unknowingly infect a network"
+    },
+    {
+      "question": "Vishing",
+      "answer": "The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source"
+    },
+    {
+      "question": "Compliance",
+      "answer": "The process of adhering to internal standards and external regulations"
+    },
+    {
+      "question": "Confidentiality, integrity, availability (CIA) triad",
+      "answer": " A model that helps inform how organizations consider risk when setting up systems and security policies"
+    },
+    {
+      "question": "Hacktivist",
+      "answer": " A person who uses hacking to achieve a political goal"
+    },
+    {
+      "question": "Security architecture",
+      "answer": " A type of security design composed of multiple components, such as tools and processes, that are used to protect an organization from risks and external threats"
+    },
+    {
+      "question": "Security ethics",
+      "answer": " Guidelines for making appropriate decisions as a security professional"
+    },
+    {
+      "question": "Security frameworks",
+      "answer": "Guidelines used for building plans to help mitigate risk and threats to data and privacy"
+    },
+    {
+      "question": "Security governance",
+      "answer": "Practices that help support, define, and direct security efforts of an organization"
+    },
+    {
+      "question": "Antivirus software",
+      "answer": "A software program used to prevent, detect, and eliminate malware and viruses"
+    },
+    {
+      "question": "Database",
+      "answer": "An organized collection of information or data"
+    },
+    {
+      "question": "Data point",
+      "answer": "A specific piece of information"
+    },
+    {
+      "question": "Internal threat",
+      "answer": "A current or former employee, external vendor, or trusted partner who poses a security risk"
+    },
+    {
+      "question": "Intrusion detection system (IDS)",
+      "answer": "An application that monitors system activity and alerts on possible intrusions"
+    },
+    {
+      "question": "Network protocol analyzer (packet sniffer)",
+      "answer": "A tool designed to capture and analyze data traffic within a network"
+    },
+    {
+      "question": "Open Web Application Security Project (OWASP)",
+      "answer": "A non-profit organization focused on improving software security"
+    },
+    {
+      "question": "Privacy protection",
+      "answer": "The act of safeguarding personal information from unauthorized use"
+    },
+    {
+      "question": "Security information and event management (SIEM)",
+      "answer": "An application that collects and analyzes log data to monitor critical activities in an organization"
+    },
+    {
+      "question": "Supply-chain attack",
+      "answer": "An attack that targets systems, applications, hardware, and/or software to locate a vulnerability where malware can be deployed"
+    },
+    {
+      "question": "Detect:",
+      "answer": "A NIST core function related to identifying potential security incidents and improving monitoring capabilities to increase the speed and efficiency of detections"
+    },
+    {
+      "question": "Assess",
+      "answer": "The fifth step of the NIST RMF that means to determine if established controls are implemented correctly"
+    },
+    {
+      "question": "External threat",
+      "answer": "Anything outside the organization that has the potential to harm organizational assets"
+    },
+    {
+      "question": "Implement",
+      "answer": "The fourth step of the NIST RMF that means to implement security and privacy plans for an organization"
+    },
+    {
+      "question": "Incident response",
+      "answer": "An organization\u2019s quick attempt to identify an attack, contain the damage, and correct the effects of a security breach"
+    },
+    {
+      "question": "Internal threat",
+      "answer": "A current or former employee, external vendor, or trusted partner who poses a security risk"
+    },
+    {
+      "question": "Playbook",
+      "answer": "A manual that provides details about any operational action"
+    },
+    {
+      "question": "Recover",
+      "answer": "A NIST core function related to returning affected systems back to normal operation"
+    },
+    {
+      "question": "Respond",
+      "answer": "A NIST core function related to making sure that the proper procedures are used to contain, neutralize, and analyze security incidents, and implement improvements to the security process"
+    },
+    {
+      "question": "Risk mitigation",
+      "answer": "The process of having the right procedures and rules in place to quickly reduce the impact of a risk like a breach"
+    },
+    {
+      "question": "Security audit",
+      "answer": "A review of an organization's security controls, policies, and procedures against a set of expectations"
+    },
+    {
+      "question": "Social engineering",
+      "answer": "A manipulation technique that exploits human error to gain private information, access, or valuables"
+    },
+    {
+      "question": "Address Resolution Protocol (ARP)",
+      "answer": "Used to determine the MAC address of the next router or device to traverse"
+    },
+    {
+      "question": "Cloud-based firewalls",
+      "answer": "Software firewalls that are hosted by the cloud service provider"
+    },
+    {
+      "question": "Cloud computing",
+      "answer": "The practice of using remote servers, application, and network services that are hosted on the internet instead of on local physical devices"
+    },
+    {
+      "question": "Cloud computing",
+      "answer": "The practice of using remote servers, application, and network services that are hosted on the internet instead of on local physical devices"
+    },
+    {
+      "question": "Cloud network",
+      "answer": "A collection of servers or computers that stores resources and data in remote data centers that can be accessed via the internet"
+    },
+    {
+      "question": "Domain Name System (DNS):",
+      "answer": "A networking protocol that translates internet domain names into IP addresses"
+    },
+    {
+      "question": "Denial of service (DoS) attack:",
+      "answer": "An attack that targets a network or server and floods it with network traffic"
+    },
+    {
+      "question": "Distributed denial of service (DDoS) attack:",
+      "answer": "A type of denial of service attack that uses multiple devices or servers located in different locations to flood the target network with unwanted traffic"
+    },
+    {
+      "question": "Hub",
+      "answer": "A network device that broadcasts information to every device on the network"
+    },
+    {
+      "question": "Hypertext Transfer Protocol (HTTP):",
+      "answer": "An application layer protocol that provides a method of communication between clients and website servers"
+    },
+    {
+      "question": "HTTP",
+      "answer": "An application layer protocol that provides a method of communication between clients and website servers"
+    },
+    {
+      "question": "Hypertext Transfer Protocol Secure (HTTPS):",
+      "answer": "A network protocol that provides a secure method of communication between clients and servers."
+    },
+    {
+      "question": "HTTPS",
+      "answer": "A network protocol that provides a secure method of communication between clients and servers."
+    },
+    {
+      "question": "Internet Control Message Protocol (ICMP)",
+      "answer": "An internet protocol used by devices to tell each other about data transmission errors across the network"
+    },
+    {
+      "question": "ICMP",
+      "answer": "An internet protocol used by devices to tell each other about data transmission errors across the network"
+    },
+    {
+      "question": "Internet Control Message Protocol (ICMP) flood:",
+      "answer": "A type of DoS attack performed by an attacker repeatedly sending ICMP request packets to a network server."
+    },
+    {
+      "question": "ICMP flood",
+      "answer": "A type of DoS attack performed by an attacker repeatedly sending ICMP request packets to a network server."
+    },
+    {
+      "question": "Internet Protocol (IP)",
+      "answer": "A set of standards used for routing and addressing data packets as they travel between devices on a network"
+    },
+    {
+      "question": "Internet Protocol (IP) address",
+      "answer": "A unique string of characters that identifies the location of a device on the internet"
+    },
+    {
+      "question": "IP address",
+      "answer": "A unique string of characters that identifies the location of a device on the internet"
+    },
+    {
+      "question": "IP spoofing",
+      "answer": "A network attack performed when an attacker changes the source IP of a data packet to impersonate an authorized system and gain access to a network"
+    },
+    {
+      "question": "Local area network (LAN):",
+      "answer": "A network that spans small areas like an office building, a school, or a home"
+    },
+    {
+      "question": "LAN",
+      "answer": "A network that spans small areas like an office building, a school, or a home"
+    },
+    {
+      "question": "Media Access Control (MAC) address:",
+      "answer": "A unique alphanumeric identifier that is assigned to each physical device on a network"
+    },
+    {
+      "question": "Multi-factor authentication (MFA)",
+      "answer": "A security measure that requires a user to verify their identity in two or more ways to access a system or network"
+    },
+    {
+      "question": "Network",
+      "answer": "A group of connected devices"
+    },
+    {
+      "question": "What is a network",
+      "answer": "A group of connected devices"
+    },
+    {
+      "question": "Network protocols",
+      "answer": "A set of rules used by two or more devices on a network to describe the order of delivery of data and the structure of data"
+    },
+    {
+      "question": "Open systems interconnection (OSI) model",
+      "answer": "A standardized concept that describes the seven layers computers use to communicate and send data over the network"
+    },
+    {
+      "question": "On-path attack",
+      "answer": "An attack where a malicious actor places themselves in the middle of an authorized connection and intercepts or alters the data in transit"
+    },
+    {
+      "question": "Packet sniffing",
+      "answer": "The practice of capturing and inspecting data packets across a network"
+    },
+    {
+      "question": "Passive packet sniffing",
+      "answer": "A type of attack where a malicious actor connects to a network hub and looks at all traffic on the network"
+    },
+    {
+      "question": "Patch update",
+      "answer": "A software and operating system update that addresses security vulnerabilities within a program or product"
+    },
+    {
+      "question": "Penetration testing",
+      "answer": "A simulated attack that helps identify vulnerabilities in systems, networks, websites, applications, and processes"
+    },
+    {
+      "question": "Port",
+      "answer": "A software-based location that organizes the sending and receiving of data between devices on a network"
+    },
+    {
+      "question": "Port filtering",
+      "answer": "A firewall function that blocks or allows certain port numbers to limit unwanted communication"
+    },
+    {
+      "question": "Router",
+      "answer": "A network device that connects multiple networks together"
+    },
+    {
+      "question": "Secure File Transfer Protocol (SFTP)",
+      "answer": "A secure protocol used to transfer files from one device to another over a network"
+    },
+    {
+      "question": "Secure shell (SSH)",
+      "answer": "A security protocol used to create a shell with a remote system"
+    },
+    {
+      "question": "Security zone",
+      "answer": "A segment of a company\u2019s network that protects the internal network from the internet"
+    },
+    {
+      "question": "Simple Network Management Protocol (SNMP)",
+      "answer": "A network protocol used for monitoring and managing devices on a network"
+    },
+    {
+      "question": "SNMP",
+      "answer": "A network protocol used for monitoring and managing devices on a network"
+    },
+    {
+      "question": "Smurf attack",
+      "answer": "A network attack performed when an attacker sniffs an authorized user\u2019s IP address and floods it with ICMP packets"
+    },
+    {
+      "question": "Switch",
+      "answer": "A device that makes connections between specific devices on a network by sending and receiving data between them"
+    },
+    {
+      "question": "Synchronize (SYN) flood attack",
+      "answer": "A type of DoS attack that simulates a TCP/IP connection and floods a server with SYN packets"
+    },
+    {
+      "question": "TCP/IP model",
+      "answer": "A framework used to visualize how data is organized and transmitted across a network"
+    },
+    {
+      "question": "Transmission Control Protocol (TCP)",
+      "answer": "An internet communication protocol that allows two devices to form a connection and stream data"
+    },
+    {
+      "question": "TCP",
+      "answer": "An internet communication protocol that allows two devices to form a connection and stream data"
+    },
+    {
+      "question": "Transmission control protocol (TCP) 3-way handshake:",
+      "answer": "A three-step process used to establish an authenticated connection between two devices on a network"
+    },
+    {
+      "question": "User Datagram Protocol (UDP)",
+      "answer": "A connectionless protocol that does not establish a connection between devices before transmissions"
+    },
+    {
+      "question": "UDP",
+      "answer": "A connectionless protocol that does not establish a connection between devices before transmissions"
+    },
+    {
+      "question": "Virtual Private Network (VPN):",
+      "answer": "A network security service that changes your public IP address and masks your virtual location so that you can keep your data private when you are using a public network like the internet"
+    },
+    {
+      "question": "VPN",
+      "answer": "A network security service that changes your public IP address and masks your virtual location so that you can keep your data private when you are using a public network like the internet"
+    },
+    {
+      "question": "Wide Area Network (WAN)",
+      "answer": "A network that spans a large geographic area like a city, state, or country"
+    },
+    {
+      "question": "WAN",
+      "answer": "A network that spans a large geographic area like a city, state, or country"
+    },
+    {
+      "question": "Wi-Fi Protected Access (WPA)",
+      "answer": "A wireless security protocol for devices to connect to the internet"
+    },
+    {
+      "question": "Application",
+      "answer": "A program that performs a specific task"
+    },
+    {
+      "question": "Central Processing Unit (CPU)",
+      "answer": "A computer\u2019s main processor, which is used to perform general computing tasks on a computer"
+    },
+    {
+      "question": "CPU",
+      "answer": "A computer\u2019s main processor, which is used to perform general computing tasks on a computer"
+    },
+    {
+      "question": "User",
+      "answer": "The person interacting with a computer"
+    },
+    {
+      "question": "User interface",
+      "answer": "A program that allows the user to control the functions of the operating system"
+    },
+    {
+      "question": "Virtual machine (VM)",
+      "answer": "A virtual version of a physical computer"
+    },
+    {
+      "question": "Access controls",
+      "answer": "Security controls that manage access, authorization, and accountability of information"
+    },
+    {
+      "question": "Advanced persistent threat (APT)",
+      "answer": "An instance when a threat actor maintains unauthorized access to a system for an extended period of time"
+    },
+    {
+      "question": "Asset classification",
+      "answer": "The practice of labeling assets based on sensitivity and importance to an organization"
+    },
+    {
+      "question": "Asset inventory",
+      "answer": "A catalog of assets that need to be protected"
+    },
+    {
+      "question": "Asset management",
+      "answer": "The process of tracking assets and the risks that affect them"
+    },
+    {
+      "question": "Brute force attack",
+      "answer": "The trial and error process of discovering private information"
+    },
+    {
+      "question": "Common Vulnerabilities and Exposures (CVE\u00ae) list",
+      "answer": "An openly accessible dictionary of known vulnerabilities and exposures"
+    },
+    {
+      "question": "CVE",
+      "answer": "An openly accessible dictionary of known vulnerabilities and exposures"
+    },
+    {
+      "question": "Data",
+      "answer": "Information that is translated, processed, or stored by a computer"
+    },
+    {
+      "question": "Data at rest",
+      "answer": "Data not currently being accessed"
+    },
+    {
+      "question": "Data in transit",
+      "answer": "Data traveling from one point to another"
+    },
+    {
+      "question": "Data in use",
+      "answer": "Data being accessed by one or more users"
+    },
+    {
+      "question": "Data custodian",
+      "answer": "Anyone or anything that\u2019s responsible for the safe handling, transport, and storage of information"
+    },
+    {
+      "question": "Data owner",
+      "answer": "The person that decides who can access, edit, use, or destroy their information"
+    },
+    {
+      "question": "Digital certificate",
+      "answer": "A file that verifies the identity of a public key holder"
+    },
+    {
+      "question": "Exposure",
+      "answer": "A mistake that can be exploited by a threat"
+    },
+    {
+      "question": "Information privacy",
+      "answer": "The protection of unauthorized access and distribution of data"
+    },
+    {
+      "question": "Information security (InfoSec)",
+      "answer": "The practice of keeping data in all states away from unauthorized users"
+    },
+    {
+      "question": "Injection attack",
+      "answer": "Malicious code inserted into a vulnerable application"
+    },
+    {
+      "question": "Policy",
+      "answer": "A set of rules that reduce risk and protect information"
+    },
+    {
+      "question": "Procedures",
+      "answer": "Step-by-step instructions to perform a specific security task"
+    },
+    {
+      "question": "Regulations",
+      "answer": "Rules set by a government or other authority to control the way something is done"
+    },
+    {
+      "question": "Risk",
+      "answer": "Anything that can impact confidentiality, integrity, or availability of an asset"
+    },
+    {
+      "question": "Security assessment",
+      "answer": "A check to determined how resilient current security implementations against threats"
+    },
+    {
+      "question": "Security hardening",
+      "answer": "The process of strengthening a system to reduce its vulnerability and attack surface"
+    },
+    {
+      "question": "Session",
+      "answer": "A sequence of network HTTP basic auth requests and responses associated with the same user"
+    },
+    {
+      "question": "Session cookie",
+      "answer": "A token that websites use to validate a session and determine how long that session should last"
+    },
+    {
+      "question": "Session hijacking",
+      "answer": "An event when attackers obtain a legitimate user\u2019s session ID"
+    },
+    {
+      "question": "Single sign-on (SSO)",
+      "answer": "A technology that combines several different logins into one"
+    },
+    {
+      "question": "Smishing",
+      "answer": "The use of text messages to trick users to obtain sensitive information or to impersonate a known source"
+    },
+    {
+      "question": "Social engineering",
+      "answer": "A manipulation technique that exploits human error to gain private information, access, or valuables"
+    },
+    {
+      "question": "Standards",
+      "answer": "References that inform how to set policies"
+    },
+    {
+      "question": "SQL (Structured Query Language)",
+      "answer": "A programming language used to create, interact with, and request information from a database"
+    },
+    {
+      "question": "Tailgating",
+      "answer": "A social engineering tactic in which unauthorized people follow an authorized person into a restricted area"
+    },
+    {
+      "question": "Threat modeling",
+      "answer": "The process of identifying assets, their vulnerabilities, and how each is exposed to threats"
+    },
+    {
+      "question": "Vulnerability scanner",
+      "answer": "Software that automatically compares existing common vulnerabilities and exposures against the technologies on the network"
+    },
+    {
+      "question": "Vulnerability management:",
+      "answer": "The process of finding and patching vulnerabilities"
+    },
+    {
+      "question": "Computer security incident response teams (CSIRT):",
+      "answer": "A specialized group of security professionals that are trained in incident management and response"
+    },
+    {
+      "question": "Containment:",
+      "answer": "The act of limiting and preventing additional damage caused by an incident"
+    },
+    {
+      "question": "Data packet:",
+      "answer": "A basic unit of information that travels from one device to another within a network"
+    },
+    {
+      "question": "Eradication:",
+      "answer": "The complete removal of the incident elements from all affected systems"
+    },
+    {
+      "question": "False negative",
+      "answer": "A state where the presence of a threat is not detected"
+    },
+    {
+      "question": "False positive",
+      "answer": "An alert that incorrectly detects the presence of a threat"
+    },
+    {
+      "question": "Honeypot",
+      "answer": "A system or resource created as a decoy vulnerable to attacks with the purpose of attracting potential intruders"
+    },
+    {
+      "question": "Host-based intrusion detection system (HIDS)",
+      "answer": "An application that monitors the activity of the host on which it\u2019s installed"
+    },
+    {
+      "question": "Incident",
+      "answer": "An occurrence that actually or imminently jeopardizes, without lawful authority, the confidentiality, integrity, or availability of information or an information system; or constitutes a violation or imminent threat of violation of law, security policies, security procedures, or acceptable use policies"
+    },
+    {
+      "question": "Network-based intrusion detection system (NIDS)",
+      "answer": "An application that collects and monitors network traffic and network data"
+    },
+    {
+      "question": "Network traffic",
+      "answer": "The amount of data that moves across a network"
+    },
+    {
+      "question": "Post-incident activity",
+      "answer": "The process of reviewing an incident to identify areas for improvement during incident handling"
+    },
+    {
+      "question": "Threat hunting",
+      "answer": "The proactive search for threats on a network"
+    },
+    {
+      "question": "True negative",
+      "answer": "A state where there is no detection of malicious activity"
+    },
+    {
+      "question": "True positive",
+      "answer": "An alert that correctly detects the presence of an attack"
+    },
+    {
+      "question": " best practices for creating and managing passwords",
+      "answer": "Use a Strong Password: Create passwords that are long, complex, and difficult to guess. Use a combination of uppercase and lowercase letters, numbers, and special characters.  Avoid Common Passwords: Avoid using easily guessable passwords such as \"password,\" \"123456,\" or common phrases. Hackers often try these first when attempting to crack passwords.  Unique Passwords for Each Account: Use a unique password for each online account you have. This prevents a security breach on one website from compromising your other accounts.  Consider Passphrases: Instead of passwords, consider using passphrases. Passphrases are longer phrases or sentences that are easier to remember but still provide strong security. For example, \"PurpleElephant$JumpingOver!Moon\" is a strong passphrase."
+    },
+    {
+      "question": "name some of the best practices for creating and managing passwords",
+      "answer": "1. Use a Strong Password: Create passwords that are long, complex, and difficult to guess. Use a combination of uppercase and lowercase letters, numbers, and special characters.\\n\\n2. Avoid Common Passwords: Avoid using easily guessable passwords such as 'password,' '123456,' or common phrases. Hackers often try these first when attempting to crack passwords.\\n\\n3. Unique Passwords for Each Account: Use a unique password for each online account you have. This prevents a security breach on one website from compromising your other accounts.\\n\\n4. Consider Passphrases: Instead of passwords, consider using passphrases. Passphrases are longer phrases or sentences that are easier to remember but still provide strong security. For example, 'PurpleElephant$JumpingOver!Moon' is a strong passphrase."
+    },
+    {
+      "question": "what is hacking",
+      "answer": "Hacking is a term that refers to the act of gaining unauthorized access to a computer system or network, typically by exploiting vulnerabilities in security defenses."
+    },
+    {
+      "question": " what is a hacker",
+      "answer": "A hacker is an individual who uses their technical knowledge and skills to gain unauthorized access to computer systems, networks, or data."
+    },
+    {
+      "question": "what is eradication",
+      "answer": "The complete removal of the incident elements from all affected systems"
+    },
+    {
+      "question": "what is a honey pot",
+      "answer": "A system or resource created as a decoy vulnerable to attacks with the purpose of attracting potential intruders"
+    },
+    {
+      "question": "buno",
+      "answer": "erer"
+    },
+    {
+      "question": "what is a risk",
+      "answer": " Anything that can impact confidentiality, integrity, or availability of an asset"
     }
   ]
 }

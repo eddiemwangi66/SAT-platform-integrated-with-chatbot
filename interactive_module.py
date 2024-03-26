@@ -27,16 +27,16 @@ class RealLifeSituation:
         self.scenario_description = scenario_description
 
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+def home(user=None):
+    return render_template('interactive_index.html', user=user)
+
 @app.route('/quiz', methods=['GET', 'POST'])
-def quiz():
+def quiz(user=None):
     global current_question_index
 
     if current_question_index >= len(quiz_questions):
         # If all questions have been answered, redirect to a summary or completion page
-        return redirect(url_for('quiz_summary'))
+        return redirect(url_for('quiz_summary_route'))
 
     current_question = quiz_questions[current_question_index]
 
@@ -44,9 +44,9 @@ def quiz():
         user_answer = int(request.form['user_answer'])
         result = user_answer == current_question.correct_option
         current_question_index += 1  # Move to the next question
-        return render_template('quiz_result.html', result=result)
+        return render_template('quiz_result.html', result=result, user=user)
 
-    return render_template('quiz.html', quiz=current_question)
+    return render_template('quiz.html', quiz=current_question, user=user)
 
 @app.route('/quiz_summary', methods=['GET'])
 def quiz_summary():
@@ -66,19 +66,23 @@ def simulation_response():
         user_response = request.form.get('user_response')
 
         # Perform any necessary logic based on the user's response
-        # In a real application, you might check if the response is correct, simulate consequences, etc.
+        correct_answer = "Report it"
+        if user_response == correct_answer:
+            result = "Your answer is correct!"
+        else:
+            result = "Your answer is incorrect. The correct answer is: " + correct_answer
 
         # Redirect the user to a page indicating the result of the simulation
-        return redirect(url_for('simulation_result'))
+        return redirect(url_for('simulation_result', result=result))
 
     # If the request method is not POST, redirect to the simulation page
     return redirect(url_for('simulation'))
 
-@app.route('/simulation_result', methods=['GET'])
-def simulation_result():
+@app.route('/simulation_result/<result>', methods=['GET'])
+def simulation_result(result):
     # Provide a page indicating the result of the simulation
-    return render_template('simulation_result.html')
-   
+    return render_template('simulation_result.html', result=result)
+
 @app.route('/real_life_situation', methods=['GET'])
 def real_life_situation():
     situation_description = "An employee receives a phone call from someone claiming to be IT support."
@@ -105,5 +109,7 @@ def real_life_situation_result():
     # Provide a page indicating the result of the real-life situation
     return render_template('real_life_situation_result.html')
    
+
+
 if __name__ == '__main__':
     app.run(debug=True)
