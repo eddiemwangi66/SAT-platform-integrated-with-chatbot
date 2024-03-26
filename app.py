@@ -6,6 +6,11 @@ from datetime import datetime, timedelta
 import uuid
 import json
 from difflib import get_close_matches
+import smtplib
+from email.mime.text import MIMEText
+from interactive_module import *
+from interactive_phishing import *
+from interactive_gamification import *
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Change this to a random secret key in a production environment
@@ -15,9 +20,9 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = ''  # Replace with your Gmail address
-app.config['MAIL_PASSWORD'] = ''  # Replace with your Gmail app password
-app.config['MAIL_DEFAULT_SENDER'] = 'Your App Name <your_email@gmail.com>'
+app.config['MAIL_USERNAME'] = 'cosymwas254@gmail.com'  # Replace with your Gmail address
+app.config['MAIL_PASSWORD'] = 'blfa psei kxtt fues'  # Replace with your Gmail app password
+app.config['MAIL_DEFAULT_SENDER'] = 'SAT PLATFORM <your_email@gmail.com>'
 mail = Mail(app)
 
 # Database connection
@@ -54,18 +59,309 @@ cursor.execute('''
 db_connection.commit()
 
 
-def send_password_reset_email(email, token):
-    # Implement your email sending logic using Flask-Mail
-    # Load email template
-    html = render_template('password_reset.html', user=email, token=token)
-    subject = 'Password Reset Request'
-    recipients = [email]
-    message = Message(subject, recipients=recipients)
-    message.html = html
-    mail.send(message)
 
 
 # Routes for serving the pages
+
+@app.route('/home')
+def home_route():
+    # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return home(user=user)
+        else:
+            # Handle the case when user_data is None
+            return home(user=None)
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+
+
+@app.route('/quiz',  methods=['GET', 'POST'])
+def quiz_route():
+        # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return quiz(user=user)
+        else:
+            # Handle the case when user_data is None
+            return quiz(user=None)
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+    
+
+@app.route('/quiz_summary', methods=['GET'])
+def quiz_summary_route():
+    quiz_summary()
+    return quiz_summary()
+
+
+@app.route('/simulation', methods=['GET'])
+def simulation_route():
+    simulation()
+    return simulation()
+
+@app.route('/simulation_response', methods=['POST'])
+def simulation_response_route():
+    simulation_response()
+    return simulation_response()
+
+@app.route('/simulation_result', methods=['GET'])
+def simulation_result_route():
+    simulation_result()
+    return simulation_result()
+
+
+
+@app.route('/real_life_situation', methods=['GET'])
+def real_life_situation_route():
+    real_life_situation()
+    return real_life_situation()
+
+
+@app.route('/phishing')
+def phishing_route():
+    # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data[0], 'username': user_data[1]}  # Access tuple elements by index
+            return phishing(user=user)
+        else:
+            # Handle the case when user_data is None
+            return phishing(user=None)
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+
+    
+@app.route('/send_email_route', methods=['POST'])    
+def send_phishing_email_route():
+     # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data[0], 'username': user_data[1]}  # Access tuple elements by index
+            return send_phishing_email(user=user)
+        else:
+            # Handle the case when user_data is None
+            return send_phishing_email(user=None)
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+
+    
+   
+@app.route('/success')
+def success_route():
+    email = request.args.get('email')
+
+    if email is None and 'email' in session:
+        email = session['email']
+
+    if email:
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data[0], 'username': user_data[1]}
+        else:
+            user = None
+    else:
+        # Handle the case when 'email' is not provided
+        return redirect(url_for('index'))
+
+    return success(email, user)
+
+@app.route('/Phishing training content')
+def provide_training_content_route():
+    email = request.args.get('email')
+
+    if email is None and 'email' in session:
+        email = session['email']
+
+    if email:
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data[0], 'username': user_data[1]}
+        else:
+            user = None
+    else:
+        # Handle the case when 'email' is not provided
+        return redirect(url_for('index'))
+
+    return provide_training_content(email, user)
+
+
+
+# gamification app route
+@app.route('/game_index', methods=['GET', 'POST'])
+def game_index_route():
+   # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return game_index(user=user)
+        else:
+            # Handle the case when user_data is None
+            return game_index(user=None)
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+    
+@app.route('/phishing_scenario', methods=['GET', 'POST'])
+def phishing_scenario_route():
+   # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return phishing_scenario(user=user)
+        else:
+            # Handle the case when user_data is None
+            return phishing_scenario(user=None)
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+@app.route('/malware_scenario', methods=['GET', 'POST'])
+def malware_scenario_route():
+    # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return malware_scenario(user=user)
+        else:
+            # Handle the case when user_data is None
+            return redirect(url_for('index'))
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+
+@app.route('/password_scenario_route', methods=['GET', 'POST'])
+def password_scenario_route():
+    # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return password_scenario(user=user)
+        else:
+            # Handle the case when user_data is None
+            return redirect(url_for('index'))
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+
+@app.route('/show_leaderboard_route')
+def show_leaderboard_route():
+    # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additionaluser information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return show_leaderboard(user=user)
+        else:
+            # Handle the case when user_data is None
+            return redirect(url_for('index'))
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+
+@app.route('/game_summary_route', methods=['GET', 'POST'])
+def game_summary_route():
+    # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return game_summary(username=user_data.username, user=user)
+        else:
+            # Handle the case when user_data is None
+            return redirect(url_for('index'))
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+@app.route('/game_over_route', methods=['GET', 'POST'])
+def game_over_route():
+    # Check if 'email' is in session
+    if 'email' in session:
+        user_email = session['email']
+
+        # Fetch additional user information including username
+        cursor.execute("SELECT email, username FROM users WHERE email = %s", (user_email,))
+        user_data = cursor.fetchone()
+
+        if user_data:
+            user = {'email': user_data.email, 'username': user_data.username}
+            return game_over(user=user)
+        else:
+            # Handle the case when user_data is None
+            return redirect(url_for('index'))
+    else:
+        # Handle the case when 'email' is not in session
+        return redirect(url_for('index'))
+
 
 @app.route('/education')
 def education():
@@ -151,11 +447,6 @@ def phishing_education():
         return redirect(url_for('index'))
    
 
-@app.route('/phishing')
-def phishing():
-    return render_template('phishing.html')
-
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
@@ -202,6 +493,7 @@ def register():
 
 
 # Forgot password route
+# Forgot password route
 @app.route('/forgot-password', methods=['GET', 'POST'])
 def forgot_password():
     if request.method == 'POST':
@@ -219,8 +511,8 @@ def forgot_password():
                 cursor.execute("INSERT INTO password_resets (email, token) VALUES (%s, %s)", (email, token))
                 db_connection.commit()
 
-                # Send the password reset email to the user with a link to reset their password
-                send_password_reset_email(email, token)
+                # Send the password reset email to the user
+                send_password_reset_email(email, token, user)
                 flash('An email has been sent to you with instructions to reset your password.', 'info')
 
                 return render_template('password_reset.html', token=token, email=email)
@@ -228,7 +520,6 @@ def forgot_password():
                 flash('There is no user with this email address.', 'danger')
 
     return render_template('forgot_password.html')
-
 
 # Reset password route
 @app.route('/reset-password/<token>', methods=['GET', 'POST'])
@@ -254,6 +545,7 @@ def reset_password(token):
     return render_template('forgot_password_success.html', token=token)
 
 
+
 # Function to check token validity and expiration
 def check_token(email, token):
     cursor.execute("SELECT * FROM password_resets WHERE email = %s AND token = %s", (email, token))
@@ -270,6 +562,45 @@ def check_token(email, token):
         return time_diff < expiration_period
 
     return False
+
+
+
+# send email route
+@app.route('/send_forgot_password_email', methods=['GET', 'POST'])
+def send_password_reset_email(email, token, user):
+    email = request.form.get('email')
+
+    if request.method == 'POST':
+        receiver_email = email
+
+        # Set up sender information (better to use environment variables)
+        sender_email = "cosymwas254@gmail.com"  # Replace with your email
+        sender_password = "blfa psei kxtt fues"  # Avoid storing password in code
+        smtp_server = "smtp.gmail.com"
+
+        # Load email template
+        html = render_template('password_reset.html', user=user, token=token)
+        subject = 'Password Reset Request'
+        recipients = [email]
+
+        # Use Flask-Mail to send the email
+        message = Message(subject, recipients=recipients, html=html)
+        message.sender = sender_email
+        message.password = sender_password
+
+        try:
+            server = smtplib.SMTP(smtp_server)
+            server.starttls()
+            server.login(sender_email, sender_password)
+            server.send(message)
+            server.quit()
+            flash('A password reset email has been sent to your email address.', 'success')
+            return redirect(url_for('forgot_password'))
+        except Exception as e:
+            flash('An error occurred while sending the password reset email. Please try again later.', 'danger')
+            return str(e)
+
+    return render_template('forgot_password_email.html', email=email)
 
 
 # Login route
@@ -448,3 +779,5 @@ def chat():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
